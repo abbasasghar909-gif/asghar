@@ -3033,7 +3033,7 @@ select.form-control {
   align-items: center;
   gap: 1.5rem;
   white-space: nowrap;
-  animation: marquee 20s linear infinite;
+  animation: marquee 25s linear infinite;
   width: max-content;
 }
 
@@ -3050,16 +3050,12 @@ select.form-control {
   opacity: 0.8;
 }
 
-.show-mobile-inline {
-  display: none;
-}
-
 @keyframes marquee {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(100vw);
   }
   100% {
-    transform: translateX(100vw);
+    transform: translateX(-100%);
   }
 }
 
@@ -3067,11 +3063,5 @@ select.form-control {
   .announcement-bar {
     font-size: 0.7rem;
     padding: 0.4rem 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .show-mobile-inline {
-    display: inline-block !important;
   }
 }
