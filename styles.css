@@ -2798,3 +2798,184 @@ select.form-control {
   }
 }
 
+/* Pricing Sibling/Family Selectors & Offers Banner */
+.calc-students-grid {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
+.calc-offers {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.offers-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.offers-title i {
+  color: var(--accent-gold);
+}
+
+.offers-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.offer-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.offer-card.popular {
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 20px var(--accent-gold-glow);
+  background: linear-gradient(135deg, rgba(16, 44, 36, 0.4) 0%, rgba(10, 25, 20, 0.4) 100%);
+}
+
+.offer-popular-tag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-gold);
+  color: hsl(165, 60%, 5%);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
+}
+
+.offer-badge {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--accent-gold);
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.offer-card.popular .offer-badge {
+  background: var(--accent-gold);
+  color: hsl(165, 60%, 5%);
+  box-shadow: 0 4px 15px var(--accent-gold-glow);
+}
+
+.offer-card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.offer-sub {
+  font-size: 0.8rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.offer-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.offer-guarantee {
+  background: rgba(16, 44, 36, 0.2);
+  border: 1px dashed var(--emerald-bright);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.guarantee-icon {
+  font-size: 2.25rem;
+  color: var(--emerald-bright);
+  line-height: 1;
+}
+
+.guarantee-text h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.guarantee-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Light Theme overrides */
+[data-theme="light"] .offer-card {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+[data-theme="light"] .offer-card.popular {
+  background: rgba(255,255,255,0.8);
+}
+[data-theme="light"] .offer-guarantee {
+  background: rgba(46, 213, 115, 0.06);
+}
+
+/* Responsive Offers */
+@media (max-width: 1024px) {
+  .offers-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .calc-students-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+  .offer-guarantee {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+  }
+  .offers-title {
+    font-size: 1.5rem;
+  }
+}

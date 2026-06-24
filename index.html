@@ -363,6 +363,16 @@
               <button class="calc-opt-btn" data-tutor-type="ijazah">Ijazah Specialist</button>
             </div>
           </div>
+
+          <div class="calc-group">
+            <label>Number of Students (Family Discount)</label>
+            <div class="calc-options-grid calc-students-grid">
+              <button class="calc-opt-btn active" data-students="1">1 Student</button>
+              <button class="calc-opt-btn" data-students="2">2 Kids (15% Off)</button>
+              <button class="calc-opt-btn" data-students="3">3 Kids (25% Off)</button>
+              <button class="calc-opt-btn" data-students="4">4+ Kids (35% Off)</button>
+            </div>
+          </div>
         </div>
 
         <div class="calc-receipt">
@@ -385,6 +395,10 @@
               <span>Lessons per month:</span>
               <strong id="receipt-total-lessons">12 classes</strong>
             </div>
+            <div class="receipt-line" id="receipt-discount-line" style="display: none;">
+              <span>Family Discount:</span>
+              <strong id="receipt-discount-value" style="color: var(--emerald-bright);">-15% (-$18.00)</strong>
+            </div>
             <div class="receipt-line">
               <span>Enrollment:</span>
               <strong style="color: var(--emerald-bright);">FREE Registration</strong>
@@ -392,6 +406,44 @@
           </div>
 
           <a href="#booking" class="btn btn-primary" id="calc-cta-btn">Book This Schedule</a>
+        </div>
+      </div>
+
+      <!-- Special Offers & Family Packages -->
+      <div class="calc-offers">
+        <h3 class="offers-title"><i class="fa-solid fa-gift"></i> Exclusive Family & Sibling Discounts</h3>
+        <p class="offers-subtitle">Financial ease is our priority. We want to ensure every child connects with the Holy Quran. Register multiple children and save automatically!</p>
+        
+        <div class="offers-grid">
+          <div class="offer-card">
+            <div class="offer-badge">15% OFF</div>
+            <h4>Sibling Package</h4>
+            <span class="offer-sub">2 Children Enrolled</span>
+            <p>Perfect for siblings. Share scheduling flexibility, get custom tracking profiles, and save 15% on total monthly tuition.</p>
+          </div>
+          
+          <div class="offer-card">
+            <div class="offer-badge">25% OFF</div>
+            <h4>Family Package</h4>
+            <span class="offer-sub">3 Children Enrolled</span>
+            <p>Make learning standard across your home. Study with designated Al-Azhar tutors and get 25% off monthly tuition.</p>
+          </div>
+          
+          <div class="offer-card popular">
+            <div class="offer-popular-tag">BEST VALUE</div>
+            <div class="offer-badge">35% OFF</div>
+            <h4>Elite Family Package</h4>
+            <span class="offer-sub">4+ Children Enrolled</span>
+            <p>Our most supportive option. Ensure every child memorizes and translates the Quran, with a massive 35% discount applied.</p>
+          </div>
+        </div>
+
+        <div class="offer-guarantee">
+          <div class="guarantee-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="guarantee-text">
+            <h4>🛡️ Our Financial Ease & Honor Pledge</h4>
+            <p>At Quranic IQ Academy, we believe that learning the word of Allah should never be hindered by pricing. If you are experiencing genuine financial hardship, please contact us directly on WhatsApp at <strong>+92 304 4719851</strong>. <strong>No student is ever turned away due to an inability to pay.</strong> We will arrange a custom installment plan or a partial/full scholarship for your children.</p>
+          </div>
         </div>
       </div>
     </div>

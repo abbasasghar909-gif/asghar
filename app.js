@@ -221,21 +221,33 @@ function initCalculator() {
   const classesBubble = document.getElementById('classes-bubble');
   const durationBtns = document.querySelectorAll('[data-duration]');
   const tutorTypeBtns = document.querySelectorAll('[data-tutor-type]');
+  const studentsBtns = document.querySelectorAll('[data-students]');
   
   const priceDisplay = document.getElementById('calc-price-display');
   const costPerLesson = document.getElementById('receipt-cost-per-lesson');
   const totalLessons = document.getElementById('receipt-total-lessons');
   const summaryText = document.getElementById('receipt-summary-text');
+  const discountLine = document.getElementById('receipt-discount-line');
+  const discountValue = document.getElementById('receipt-discount-value');
   
   let classesPerWeek = parseInt(classesSlider.value);
   let classDuration = 30; // Minutes
   let tutorType = 'standard'; // standard, senior, ijazah
+  let numStudents = 1;
 
   // Base rates per lesson (30 minutes)
   const baseRates = {
     standard: 4.50,
     senior: 6.50,
     ijazah: 8.50
+  };
+
+  // Sibling/Family Discounts
+  const discountRates = {
+    1: 0,
+    2: 0.15, // 15% Off
+    3: 0.25, // 25% Off
+    4: 0.35  // 35% Off
   };
 
   function updatePricing() {
@@ -251,10 +263,25 @@ function initCalculator() {
     if (classDuration === 60) durationMultiplier = 1.70;
 
     const ratePerLesson = baseRates[tutorType] * durationMultiplier;
-    const finalMonthlyPrice = Math.round(ratePerLesson * monthlyLessons);
+    
+    // Total for all students
+    const subtotalPrice = Math.round(ratePerLesson * monthlyLessons) * numStudents;
+    
+    // Apply family discount
+    const discountPercent = discountRates[numStudents];
+    const discountAmount = Math.round(subtotalPrice * discountPercent);
+    const finalMonthlyPrice = subtotalPrice - discountAmount;
     
     priceDisplay.innerHTML = `$${finalMonthlyPrice}<span>/mo</span>`;
     costPerLesson.textContent = `$${ratePerLesson.toFixed(2)}`;
+    
+    // Show discount line in receipt if applicable
+    if (discountPercent > 0) {
+      discountValue.textContent = `-${discountPercent * 100}% (-$${discountAmount}.00)`;
+      discountLine.style.display = 'flex';
+    } else {
+      discountLine.style.display = 'none';
+    }
     
     const tutorNames = {
       standard: "Standard Instructor",
@@ -262,7 +289,8 @@ function initCalculator() {
       ijazah: "Ijazah Specialist"
     };
     
-    summaryText.textContent = `${classesPerWeek} lessons per week (${classDuration} mins, ${tutorNames[tutorType]})`;
+    const studentLabel = numStudents === 1 ? "1 Student" : `${numStudents} Students`;
+    summaryText.textContent = `${classesPerWeek} lessons/week (${classDuration} mins, ${tutorNames[tutorType]}) - ${studentLabel}`;
   }
 
   classesSlider.addEventListener('input', (e) => {
@@ -284,6 +312,15 @@ function initCalculator() {
       tutorTypeBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       tutorType = btn.getAttribute('data-tutor-type');
+      updatePricing();
+    });
+  });
+
+  studentsBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      studentsBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      numStudents = parseInt(btn.getAttribute('data-students'));
       updatePricing();
     });
   });
