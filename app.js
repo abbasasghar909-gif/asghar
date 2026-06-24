@@ -905,7 +905,7 @@ function initAIChatbot() {
     
     // 1. Free Trial/Booking/Registration/Sign up
     if (text.includes('free') || text.includes('trial') || text.includes('book') || text.includes('join') || text.includes('register') || text.includes('class') || text.includes('schedule') || text.includes('start') || text.includes('sign up')) {
-      return "Start your customized Quran learning journey with **2 Free Trial Classes** (absolutely zero commitment, no credit card required)!<br><br>Our certified Al-Azhar scholars provide 1-on-1 interactive lessons tailored to your pace.<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Click here to open the Booking Form!</span>";
+      return "Start your customized Quran learning journey with **2 Free Trial Classes** (absolutely zero commitment, no credit card required)!<br><br>Our certified Jamia tul Kausar scholars provide 1-on-1 interactive lessons tailored to your pace.<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Click here to open the Booking Form!</span>";
     }
 
     // 2. Contact/Mobile Number/WhatsApp/Email/Location
@@ -920,7 +920,7 @@ function initAIChatbot() {
 
     // 4. Tutors
     if (text.includes('tutor') || text.includes('teacher') || text.includes('scholar') || text.includes('sheikh') || text.includes('asghar') || text.includes('sadia') || text.includes('amin') || text.includes('ustadh') || text.includes('staff')) {
-      return "Our academy features highly qualified Quran scholars:<br><br>• **Asghar Abbas**: Quran, Tajweed & Arabic Instructor (M.A. Arabic & Islamic Studies, 5+ years experience).<br>• **Ustadhah Sadia Rehman**: Female Arabic & Urdu Scholar (Shahadat-ul-Alimiyyah, 6+ years experience).<br>• **Sheikh Mohammad Amin**: Quran Tafsir & Translation Specialist (M.A. Tafsir, Al-Azhar University, 8+ years experience).<br><br>You can study with any of these certified tutors. Book a free trial to match with them!<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Book Free Trial Classes</span>";
+      return "Our academy features highly qualified Quran scholars:<br><br>• **Asghar Abbas**: Quran, Tajweed & Arabic Instructor (M.A. Arabic & Islamic Studies, 5+ years experience).<br>• **Ustadhah Sadia Rehman**: Female Arabic & Urdu Scholar (Shahadat-ul-Alimiyyah, 6+ years experience).<br>• **Sheikh Mohammad Amin**: Quran Tafsir & Translation Specialist (M.A. Tafsir, Jamia tul Kausar University, 8+ years experience).<br><br>You can study with any of these certified tutors. Book a free trial to match with them!<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Book Free Trial Classes</span>";
     }
 
     // 5. Pricing
@@ -934,7 +934,7 @@ function initAIChatbot() {
     }
 
     // 7. Default fallback response
-    return "Thank you for your question! I want to help you learn the Quran. I can assist you with details about our Al-Azhar certified tutors, courses (Tafsir, Translation, Tajweed), and registration.<br><br>The best way to start is by booking your **2 Free Trial Classes** so we can evaluate your level and setup your customized plan.<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Click here to Book a Free Trial!</span><br><br>Or you can text our admin directly on WhatsApp: [+92 304 4719851](https://wa.me/923044719851).";
+    return "Thank you for your question! I want to help you learn the Quran. I can assist you with details about our Jamia tul Kausar certified tutors, courses (Tafsir, Translation, Tajweed), and registration.<br><br>The best way to start is by booking your **2 Free Trial Classes** so we can evaluate your level and setup your customized plan.<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Click here to Book a Free Trial!</span><br><br>Or you can text our admin directly on WhatsApp: [+92 304 4719851](https://wa.me/923044719851).";
   }
 }
 
