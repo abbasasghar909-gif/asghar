@@ -235,11 +235,11 @@ function initCalculator() {
   let tutorType = 'standard'; // standard, senior, ijazah
   let numStudents = 1;
 
-  // Base rates per lesson (30 minutes)
+  // Base normal rates per lesson (30 minutes) before 20% limited time discount
   const baseRates = {
-    standard: 4.50,
-    senior: 6.50,
-    ijazah: 8.50
+    standard: 4.38, // 20% off brings standard to exactly $3.50/class
+    senior: 6.25,   // 20% off brings senior to exactly $5.00/class
+    ijazah: 8.75    // 20% off brings ijazah to exactly $7.00/class
   };
 
   // Sibling/Family Discounts
@@ -249,6 +249,8 @@ function initCalculator() {
     3: 0.25, // 25% Off
     4: 0.35  // 35% Off
   };
+
+  const promoDiscountPercent = 0.20; // 20% limited-time offer
 
   function updatePricing() {
     classesBubble.textContent = `${classesPerWeek} Class${classesPerWeek > 1 ? 'es' : ''} / wk`;
@@ -262,22 +264,25 @@ function initCalculator() {
     if (classDuration === 45) durationMultiplier = 1.35;
     if (classDuration === 60) durationMultiplier = 1.70;
 
-    const ratePerLesson = baseRates[tutorType] * durationMultiplier;
+    const normalRatePerLesson = baseRates[tutorType] * durationMultiplier;
+    const discountedRatePerLesson = normalRatePerLesson * (1 - promoDiscountPercent);
     
-    // Total for all students
-    const subtotalPrice = Math.round(ratePerLesson * monthlyLessons) * numStudents;
+    // Monthly subtotal before sibling discount
+    const subtotalPriceNormal = Math.round(normalRatePerLesson * monthlyLessons) * numStudents;
+    const subtotalPriceDiscounted = Math.round(discountedRatePerLesson * monthlyLessons) * numStudents;
     
-    // Apply family discount
-    const discountPercent = discountRates[numStudents];
-    const discountAmount = Math.round(subtotalPrice * discountPercent);
-    const finalMonthlyPrice = subtotalPrice - discountAmount;
+    // Apply family discount on top of promo price
+    const familyDiscountPercent = discountRates[numStudents];
+    const familyDiscountAmount = Math.round(subtotalPriceDiscounted * familyDiscountPercent);
+    const finalMonthlyPrice = subtotalPriceDiscounted - familyDiscountAmount;
     
-    priceDisplay.innerHTML = `$${finalMonthlyPrice}<span>/mo</span>`;
-    costPerLesson.textContent = `$${ratePerLesson.toFixed(2)}`;
+    // Render prices with crossed-out original rates
+    priceDisplay.innerHTML = `<span class="original-price">$${subtotalPriceNormal}</span>$${finalMonthlyPrice}<span>/mo</span>`;
+    costPerLesson.innerHTML = `<span style="text-decoration: line-through; opacity: 0.5; font-size: 0.85em; font-weight: 500; margin-right: 0.4rem;">$${normalRatePerLesson.toFixed(2)}</span>$${discountedRatePerLesson.toFixed(2)}`;
     
-    // Show discount line in receipt if applicable
-    if (discountPercent > 0) {
-      discountValue.textContent = `-${discountPercent * 100}% (-$${discountAmount}.00)`;
+    // Show sibling/family discount line in receipt if applicable
+    if (familyDiscountPercent > 0) {
+      discountValue.textContent = `-${familyDiscountPercent * 100}% (-$${familyDiscountAmount}.00)`;
       discountLine.style.display = 'flex';
     } else {
       discountLine.style.display = 'none';

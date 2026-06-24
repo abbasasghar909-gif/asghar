@@ -2979,3 +2979,30 @@ select.form-control {
     font-size: 1.5rem;
   }
 }
+
+/* Original tuition and promo badges */
+.original-price {
+  text-decoration: line-through;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  margin-right: 0.6rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.promo-badge {
+  background: rgba(235, 94, 40, 0.1);
+  border: 1px solid rgba(235, 94, 40, 0.3);
+  color: #ff7a45;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
