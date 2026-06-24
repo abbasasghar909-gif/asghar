@@ -1723,7 +1723,48 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
+  <!-- AI Chatbot Widget -->
+  <div id="ai-chatbot-container">
+    <button id="ai-chatbot-toggle" aria-label="Open AI Assistant">
+      <i class="fa-solid fa-robot"></i>
+      <span class="chatbot-pulse"></span>
+    </button>
+    
+    <div id="ai-chatbot-window" class="hidden">
+      <div class="chatbot-header">
+        <div class="chatbot-brand">
+          <div class="chatbot-avatar">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div>
+            <h4>Quranic IQ Assistant</h4>
+            <span class="chatbot-status"><span class="status-dot"></span> Online</span>
+          </div>
+        </div>
+        <button id="ai-chatbot-close" aria-label="Close Chat">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      
+      <div class="chatbot-messages" id="chatbot-messages">
+        <!-- Messages will be injected dynamically -->
+      </div>
+      
+      <div class="chatbot-quick-replies" id="chatbot-quick-replies">
+        <!-- Quick replies chips will go here -->
+      </div>
+      
+      <div class="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Type your question..." autocomplete="off">
+        <button id="chatbot-send" aria-label="Send Message">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
+
 

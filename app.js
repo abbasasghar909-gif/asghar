@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initTestimonials();
   initBlog();
+  initAIChatbot();
 });
 
 // 1. Theme Management (Dark/Light Mode)
@@ -740,6 +741,167 @@ function initBlog() {
 
   // Run once initially
   updateBlogVisibility();
+}
+
+// 8. AI Chatbot Widget Logic
+function initAIChatbot() {
+  const container = document.getElementById('ai-chatbot-container');
+  if (!container) return;
+
+  const toggleBtn = document.getElementById('ai-chatbot-toggle');
+  const chatWindow = document.getElementById('ai-chatbot-window');
+  const closeBtn = document.getElementById('ai-chatbot-close');
+  const messagesContainer = document.getElementById('chatbot-messages');
+  const inputField = document.getElementById('chatbot-input');
+  const sendBtn = document.getElementById('chatbot-send');
+  const repliesContainer = document.getElementById('chatbot-quick-replies');
+
+  let isFirstOpen = true;
+
+  // Toggle Chat window
+  toggleBtn.addEventListener('click', () => {
+    chatWindow.classList.toggle('visible');
+    if (chatWindow.classList.contains('visible') && isFirstOpen) {
+      showTypingIndicator();
+      setTimeout(() => {
+        removeTypingIndicator();
+        sendBotMessage("Assalamu Alaikum! I am the Quranic IQ AI Assistant. How can I help you learn today? I can answer questions about our courses, tutors, schedules, and pricing, or guide you to book your 2 Free Trial Classes!");
+        showQuickReplies();
+      }, 800);
+      isFirstOpen = false;
+    }
+    inputField.focus();
+  });
+
+  closeBtn.addEventListener('click', () => {
+    chatWindow.classList.remove('visible');
+  });
+
+  // Send message on click/enter
+  sendBtn.addEventListener('click', handleUserSend);
+  inputField.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleUserSend();
+  });
+
+  function handleUserSend() {
+    const text = inputField.value.trim();
+    if (!text) return;
+
+    // Add user message
+    addUserMessage(text);
+    inputField.value = '';
+
+    // Show typing indicator
+    showTypingIndicator();
+
+    // Process response after delay
+    setTimeout(() => {
+      removeTypingIndicator();
+      const botResponse = getBotResponse(text);
+      sendBotMessage(botResponse);
+      showQuickReplies();
+    }, 1000);
+  }
+
+  function addUserMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chat-message message-user';
+    msg.textContent = text;
+    messagesContainer.appendChild(msg);
+    scrollToBottom();
+  }
+
+  function sendBotMessage(text) {
+    const msg = document.createElement('div');
+    msg.className = 'chat-message message-bot';
+    msg.innerHTML = text; // innerHTML allows links & formatting
+    messagesContainer.appendChild(msg);
+    scrollToBottom();
+  }
+
+  let typingIndicator = null;
+  function showTypingIndicator() {
+    typingIndicator = document.createElement('div');
+    typingIndicator.className = 'chat-message message-bot';
+    typingIndicator.innerHTML = '<div class="chatbot-typing"><span></span><span></span><span></span></div>';
+    messagesContainer.appendChild(typingIndicator);
+    scrollToBottom();
+  }
+
+  function removeTypingIndicator() {
+    if (typingIndicator) {
+      typingIndicator.remove();
+      typingIndicator = null;
+    }
+  }
+
+  function scrollToBottom() {
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  const quickReplies = [
+    { text: "📖 View Courses", q: "What courses do you offer?" },
+    { text: "👨‍🏫 Meet Tutors", q: "Who are the tutors?" },
+    { text: "📞 Contact Info", q: "What is your contact number?" },
+    { text: "🎁 Book Free Trial", q: "How do I book a free trial?" }
+  ];
+
+  function showQuickReplies() {
+    repliesContainer.innerHTML = '';
+    quickReplies.forEach(reply => {
+      const btn = document.createElement('button');
+      btn.className = 'quick-reply-btn';
+      btn.textContent = reply.text;
+      btn.addEventListener('click', () => {
+        addUserMessage(reply.q);
+        showTypingIndicator();
+        setTimeout(() => {
+          removeTypingIndicator();
+          sendBotMessage(getBotResponse(reply.q));
+          showQuickReplies();
+        }, 800);
+      });
+      repliesContainer.appendChild(btn);
+    });
+  }
+
+  // Answer matching logic
+  function getBotResponse(input) {
+    const text = input.toLowerCase();
+    
+    // 1. Free Trial/Booking/Registration/Sign up
+    if (text.includes('free') || text.includes('trial') || text.includes('book') || text.includes('join') || text.includes('register') || text.includes('class') || text.includes('schedule') || text.includes('start') || text.includes('sign up')) {
+      return "Start your customized Quran learning journey with **2 Free Trial Classes** (absolutely zero commitment, no credit card required)!<br><br>Our certified Al-Azhar scholars provide 1-on-1 interactive lessons tailored to your pace.<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Click here to open the Booking Form!</span>";
+    }
+
+    // 2. Contact/Mobile Number/WhatsApp/Email/Location
+    if (text.includes('phone') || text.includes('mobile') || text.includes('number') || text.includes('contact') || text.includes('whatsapp') || text.includes('email') || text.includes('location') || text.includes('address') || text.includes('pakistan') || text.includes('islamabad') || text.includes('call')) {
+      return "You can reach Quranic IQ Academy directly via:<br>📞 **Phone/WhatsApp**: [+92 304 4719851](https://wa.me/923044719851)<br>📧 **Email**: [info@quraniciq.com](mailto:info@quraniciq.com)<br>📍 **Location**: Islamabad, Pakistan<br><br>Feel free to message us on WhatsApp anytime for a fast response, or book your free trial classes below!<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Book Free Trial Classes</span>";
+    }
+
+    // 3. Courses
+    if (text.includes('course') || text.includes('learn') || text.includes('translation') || text.includes('tafsir') || text.includes('tajweed') || text.includes('hifz') || text.includes('memoriz') || text.includes('read') || text.includes('grammar') || text.includes('vocabulary') || text.includes('syllabus')) {
+      return "We offer high-quality 1-on-1 courses for both kids and adults:<br><br>1. 📖 **Word-by-Word Quran Translation**: Focuses on root words, vocabulary, and direct comprehension.<br>2. 🧠 **Quranic Tafsir & Exegesis**: In-depth linguistic, historical, and thematic study.<br>3. 🗣️ **Quran Recitation & Tajweed**: Perfect your articulation and flow with certified rules.<br>4. 🏅 **Hifz-ul-Quran (Memorization)**: Guided memorization with systematic trackers.<br><br>Would you like to try one of these? Book your free trial today!<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Book Free Trial Classes</span>";
+    }
+
+    // 4. Tutors
+    if (text.includes('tutor') || text.includes('teacher') || text.includes('scholar') || text.includes('sheikh') || text.includes('asghar') || text.includes('sadia') || text.includes('amin') || text.includes('ustadh') || text.includes('staff')) {
+      return "Our academy features highly qualified Quran scholars:<br><br>• **Asghar Abbas**: Quran, Tajweed & Arabic Instructor (M.A. Arabic & Islamic Studies, 5+ years experience).<br>• **Ustadhah Sadia Rehman**: Female Arabic & Urdu Scholar (Shahadat-ul-Alimiyyah, 6+ years experience).<br>• **Sheikh Mohammad Amin**: Quran Tafsir & Translation Specialist (M.A. Tafsir, Al-Azhar University, 8+ years experience).<br><br>You can study with any of these certified tutors. Book a free trial to match with them!<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Book Free Trial Classes</span>";
+    }
+
+    // 5. Pricing
+    if (text.includes('price') || text.includes('fee') || text.includes('cost') || text.includes('charge') || text.includes('usd') || text.includes('package') || text.includes('month') || text.includes('rate') || text.includes('money')) {
+      return "Our learning packages are highly affordable and flexible, starting from standard hourly rates. We also offer family discounts!<br><br>To get started, we recommend taking our **2 Free Trial Classes** to evaluate your level and discuss schedules with your tutor. No credit card is required.<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Book Your Free Trials</span>";
+    }
+
+    // 6. Generic greetings
+    if (text.includes('hello') || text.includes('hi') || text.includes('salam') || text.includes('hey') || text.includes('assalamu') || text.includes('greetings') || text.includes('morning') || text.includes('evening')) {
+      return "Assalamu Alaikum! How can I help you today? Ask me about our courses, tutors, packages, or how to get started with your free trial classes!";
+    }
+
+    // 7. Default fallback response
+    return "Thank you for your question! I want to help you learn the Quran. I can assist you with details about our Al-Azhar certified tutors, courses (Tafsir, Translation, Tajweed), and registration.<br><br>The best way to start is by booking your **2 Free Trial Classes** so we can evaluate your level and setup your customized plan.<br><br><span class='chatbot-cta-link' onclick='document.getElementById(\"booking\").scrollIntoView({behavior: \"smooth\"}); document.getElementById(\"ai-chatbot-window\").classList.remove(\"visible\");'>👉 Click here to Book a Free Trial!</span><br><br>Or you can text our admin directly on WhatsApp: [+92 304 4719851](https://wa.me/923044719851).";
+  }
 }
 
 
