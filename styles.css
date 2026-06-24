@@ -1858,7 +1858,7 @@ select.form-control {
 @media (max-width: 768px) {
   .section {
     padding: 5rem 0;
-    scroll-margin-top: 112px; /* Accounts for fixed header on mobile */
+    scroll-margin-top: 20px; /* Header is in-flow on mobile, standard spacing */
   }
   .section-title {
     font-size: 2.25rem;
@@ -1867,17 +1867,20 @@ select.form-control {
     font-size: 2.75rem;
   }
   .hero {
-    padding-top: 130px;
+    padding-top: 0; /* Header is relative and in-flow, no offset needed */
+  }
+  .header {
+    position: relative; /* Not fixed in mobile version */
   }
   .hamburger {
     display: flex;
   }
   .nav-menu {
-    position: fixed;
-    top: 112px;
+    position: absolute;
+    top: 100%;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 112px);
+    height: auto;
     background: var(--bg-secondary);
     border-top: 1px solid var(--glass-border);
     flex-direction: column;
@@ -1894,10 +1897,7 @@ select.form-control {
     gap: 0.75rem;
   }
   #nav-booking-cta {
-    padding: 0 1rem;
-    font-size: 0.8rem;
-    white-space: nowrap;
-    height: 38px;
+    display: none; /* Only show in top of offer line, hide in navbar on mobile */
   }
   .hide-mobile {
     display: none;
@@ -3019,23 +3019,28 @@ select.form-control {
 .announcement-bar {
   background: linear-gradient(90deg, #ff7a45 0%, var(--accent-gold) 100%);
   color: hsl(165, 60%, 5%);
-  text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   font-size: 0.8rem;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  z-index: 1001;
+  overflow: hidden;
   position: relative;
+  width: 100%;
+  z-index: 1001;
+}
+
+.announcement-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  width: max-content;
 }
 
 .announcement-link {
   color: hsl(165, 60%, 5%) !important;
   text-decoration: underline !important;
   font-weight: 700;
-  margin-left: 0.5rem;
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
@@ -3049,16 +3054,18 @@ select.form-control {
   display: none;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
 @media (max-width: 576px) {
   .announcement-bar {
     font-size: 0.7rem;
-    padding: 0.4rem 0.5rem;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0.25rem;
-    justify-content: center;
-  }
-  .announcement-link {
-    margin-left: 0.25rem;
+    padding: 0.4rem 0;
   }
 }
