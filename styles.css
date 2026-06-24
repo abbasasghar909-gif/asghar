@@ -131,6 +131,7 @@ button, input, select, textarea {
 .section {
   padding: 8rem 0;
   position: relative;
+  scroll-margin-top: 120px; /* Accounts for fixed header */
 }
 
 .section-header {
@@ -205,7 +206,7 @@ button, input, select, textarea {
 
 /* Header & Glassmorphic Navigation */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -337,7 +338,7 @@ button, input, select, textarea {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 140px; /* Accounts for fixed header + spacing */
   position: relative;
   background: radial-gradient(circle at 10% 20%, var(--bg-accent-glow) 0%, transparent 40%),
               radial-gradient(circle at 90% 80%, var(--emerald-glow) 0%, transparent 50%);
@@ -1857,6 +1858,7 @@ select.form-control {
 @media (max-width: 768px) {
   .section {
     padding: 5rem 0;
+    scroll-margin-top: 112px; /* Accounts for fixed header on mobile */
   }
   .section-title {
     font-size: 2.25rem;
@@ -1864,15 +1866,18 @@ select.form-control {
   .hero-title {
     font-size: 2.75rem;
   }
+  .hero {
+    padding-top: 130px;
+  }
   .hamburger {
     display: flex;
   }
   .nav-menu {
     position: fixed;
-    top: 80px;
+    top: 112px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 112px);
     background: var(--bg-secondary);
     border-top: 1px solid var(--glass-border);
     flex-direction: column;
@@ -1896,6 +1901,9 @@ select.form-control {
   }
   .hide-mobile {
     display: none;
+  }
+  .show-mobile-inline {
+    display: inline;
   }
   .theme-toggle {
     width: 38px;
@@ -3037,6 +3045,10 @@ select.form-control {
   opacity: 0.8;
 }
 
+.show-mobile-inline {
+  display: none;
+}
+
 @media (max-width: 576px) {
   .announcement-bar {
     font-size: 0.72rem;
@@ -3046,5 +3058,12 @@ select.form-control {
   }
   .announcement-link {
     margin-left: 0;
+  }
+  .nav-menu {
+    top: 132px;
+    height: calc(100vh - 132px);
+  }
+  .hero {
+    padding-top: 150px;
   }
 }
