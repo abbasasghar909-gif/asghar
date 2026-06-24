@@ -205,7 +205,7 @@ button, input, select, textarea {
 
 /* Header & Glassmorphic Navigation */
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -3005,4 +3005,46 @@ select.form-control {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* Top Announcement Bar */
+.announcement-bar {
+  background: linear-gradient(90deg, #ff7a45 0%, var(--accent-gold) 100%);
+  color: hsl(165, 60%, 5%);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 1001;
+  position: relative;
+}
+
+.announcement-link {
+  color: hsl(165, 60%, 5%) !important;
+  text-decoration: underline !important;
+  font-weight: 700;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.announcement-link:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 576px) {
+  .announcement-bar {
+    font-size: 0.72rem;
+    padding: 0.4rem 0.75rem;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .announcement-link {
+    margin-left: 0;
+  }
 }
