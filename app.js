@@ -48,16 +48,8 @@ function initNavbar() {
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // Sticky header class on scroll
+  // Highlight links on scroll
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.style.padding = '0.5rem 0';
-      header.style.backgroundColor = 'var(--glass-bg)';
-    } else {
-      header.style.padding = '0';
-      header.style.backgroundColor = '';
-    }
-    
     // Highlight links on scroll
     let current = '';
     const sections = document.querySelectorAll('section');
