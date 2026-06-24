@@ -3069,3 +3069,9 @@ select.form-control {
     padding: 0.4rem 0;
   }
 }
+
+@media (max-width: 768px) {
+  .show-mobile-inline {
+    display: inline-block !important;
+  }
+}
