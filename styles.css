@@ -1858,7 +1858,7 @@ select.form-control {
 @media (max-width: 768px) {
   .section {
     padding: 5rem 0;
-    scroll-margin-top: 20px; /* Header is in-flow on mobile, standard spacing */
+    scroll-margin-top: 112px; /* Accounts for fixed header on mobile */
   }
   .section-title {
     font-size: 2.25rem;
@@ -1867,20 +1867,20 @@ select.form-control {
     font-size: 2.75rem;
   }
   .hero {
-    padding-top: 0; /* Header is relative and in-flow, no offset needed */
+    padding-top: 130px; /* Accounts for fixed header on mobile */
   }
   .header {
-    position: relative; /* Not fixed in mobile version */
+    position: fixed; /* Keep fixed in mobile version to prevent offer line from disappearing */
   }
   .hamburger {
     display: flex;
   }
   .nav-menu {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 112px;
     left: -100%;
     width: 100%;
-    height: auto;
+    height: calc(100vh - 112px);
     background: var(--bg-secondary);
     border-top: 1px solid var(--glass-border);
     flex-direction: column;
@@ -3052,7 +3052,7 @@ select.form-control {
 
 @keyframes marquee {
   0% {
-    transform: translateX(100vw);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(-100%);
