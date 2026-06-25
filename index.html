@@ -482,7 +482,7 @@
           <!-- Slide 1 -->
           <div class="tutor-slide">
             <div class="tutor-img-box">
-              <img src="assets/asghar_abbas.jpg" alt="Asghar Abbas - Quran, Tajweed & Arabic Language Instructor at Quranic IQ Academy" loading="lazy">
+              <img src="assets/asghar_abbas.jpg" alt="Asghar Abbas - Quran, Tajweed & Arabic Language Instructor at Quranic IQ Academy" loading="lazy" width="400" height="400">
               <span class="tutor-badge-overlay">🎓 M.A. Arabic & Islamic Studies</span>
             </div>
             <div class="tutor-details">
@@ -516,7 +516,7 @@
           <!-- Slide 2 -->
           <div class="tutor-slide" style="display:none;">
             <div class="tutor-img-box">
-              <img src="assets/tutor2_profile.jpg" alt="Ustadhah Sadia Rehman - Arabic & Urdu Language Instructor at Quranic IQ Academy" loading="lazy">
+              <img src="assets/tutor2_profile.jpg" alt="Ustadhah Sadia Rehman - Arabic & Urdu Language Instructor at Quranic IQ Academy" loading="lazy" width="400" height="400">
               <span class="tutor-badge-overlay">🎓 Urdu & Arabic Scholar</span>
             </div>
             <div class="tutor-details">
@@ -550,7 +550,7 @@
           <!-- Slide 3 -->
           <div class="tutor-slide" style="display:none;">
             <div class="tutor-img-box">
-              <img src="assets/tutor3_profile.jpg" alt="Sheikh Mohammad Amin - Quran Tafsir & Translation Specialist at Quranic IQ Academy" loading="lazy">
+              <img src="assets/tutor3_profile.jpg" alt="Sheikh Mohammad Amin - Quran Tafsir & Translation Specialist at Quranic IQ Academy" loading="lazy" width="400" height="400">
               <span class="tutor-badge-overlay">🎓 M.A. Tafsir (Jamia tul Kausar)</span>
             </div>
             <div class="tutor-details">
@@ -1092,14 +1092,14 @@
 
           <!-- Step 2: Course & Level Preference -->
           <div class="booking-step" id="step-2-panel">
-            <h3 class="booking-step-title">Course Preferences</h3>
+            <h3 class="booking-step-title" id="step-2-title">Course Preferences</h3>
             <p class="booking-step-subtitle">Select the primary course and tell us your baseline.</p>
 
-            <div class="radio-cards-grid">
-              <label class="radio-card">
-                <input type="radio" name="selected-course" value="qaida" checked>
+            <div class="radio-cards-grid" role="radiogroup" aria-labelledby="step-2-title">
+              <label class="radio-card" for="course-qaida">
+                <input type="radio" id="course-qaida" name="selected-course" value="qaida" checked>
                 <div class="radio-card-content">
-                  <div class="radio-card-icon"><i class="fa-solid fa-book-open"></i></div>
+                  <div class="radio-card-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
                   <div class="radio-card-info">
                     <h4>Noorani Qaida</h4>
                     <p>For absolute beginners</p>
@@ -1107,10 +1107,10 @@
                 </div>
               </label>
 
-              <label class="radio-card">
-                <input type="radio" name="selected-course" value="tajweed">
+              <label class="radio-card" for="course-tajweed">
+                <input type="radio" id="course-tajweed" name="selected-course" value="tajweed">
                 <div class="radio-card-content">
-                  <div class="radio-card-icon"><i class="fa-solid fa-volume-high"></i></div>
+                  <div class="radio-card-icon"><i class="fa-solid fa-volume-high" aria-hidden="true"></i></div>
                   <div class="radio-card-info">
                     <h4>Tajweed Recitation</h4>
                     <p>Focus on pronunciation</p>
@@ -1118,10 +1118,10 @@
                 </div>
               </label>
 
-              <label class="radio-card">
-                <input type="radio" name="selected-course" value="hifz">
+              <label class="radio-card" for="course-hifz">
+                <input type="radio" id="course-hifz" name="selected-course" value="hifz">
                 <div class="radio-card-content">
-                  <div class="radio-card-icon"><i class="fa-solid fa-brain"></i></div>
+                  <div class="radio-card-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
                   <div class="radio-card-info">
                     <h4>Hifz Memorization</h4>
                     <p>Structured Quran Hifz</p>
@@ -1129,10 +1129,10 @@
                 </div>
               </label>
 
-              <label class="radio-card">
-                <input type="radio" name="selected-course" value="arabic">
+              <label class="radio-card" for="course-arabic">
+                <input type="radio" id="course-arabic" name="selected-course" value="arabic">
                 <div class="radio-card-content">
-                  <div class="radio-card-icon"><i class="fa-solid fa-language"></i></div>
+                  <div class="radio-card-icon"><i class="fa-solid fa-language" aria-hidden="true"></i></div>
                   <div class="radio-card-info">
                     <h4>Arabic Language</h4>
                     <p>Grammar and vocabulary</p>
@@ -1229,7 +1229,7 @@
             <!-- Article 1 -->
             <div class="blog-card" data-blog-category="recitation">
               <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=400&auto=format&fit=crop" alt="Quran book open for recitation" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&w=400&auto=format&fit=crop" alt="Quran book open for recitation" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Recitation</span>
               </div>
               <div class="blog-card-body">
@@ -1277,7 +1277,7 @@
             <!-- Article 2 -->
             <div class="blog-card" data-blog-category="recitation">
               <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=80&w=400&auto=format&fit=crop" alt="Islamic architecture interior" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=80&w=400&auto=format&fit=crop" alt="Islamic architecture interior" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Tajweed</span>
               </div>
               <div class="blog-card-body">
@@ -1328,7 +1328,7 @@
             <!-- Article 3 -->
             <div class="blog-card" data-blog-category="comprehension">
               <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=400&auto=format&fit=crop" alt="Classical Arabic book open" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=80&w=400&auto=format&fit=crop" alt="Classical Arabic book open" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Vocabulary</span>
               </div>
               <div class="blog-card-body">
@@ -1368,7 +1368,7 @@
             <!-- Article 4 -->
             <div class="blog-card" data-blog-category="hifz">
               <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=400&auto=format&fit=crop" alt="Person studying with notebook and coffee" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=400&auto=format&fit=crop" alt="Person studying with notebook and coffee" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Hifz</span>
               </div>
               <div class="blog-card-body">
@@ -1407,7 +1407,7 @@
             <!-- Article 5 -->
             <div class="blog-card" data-blog-category="recitation">
               <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?q=80&w=400&auto=format&fit=crop" alt="Mosque minarets dome and crescent moon representing Arabic and Islamic tutors" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?q=80&w=400&auto=format&fit=crop" alt="Mosque minarets dome and crescent moon representing Arabic and Islamic tutors" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Instructors</span>
               </div>
               <div class="blog-card-body">
@@ -1440,7 +1440,7 @@
             <!-- Article 6 -->
             <div class="blog-card" data-blog-category="beginners">
               <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1597935258735-e254c1839512?q=80&w=400&auto=format&fit=crop" alt="Holy Quran open on rehal holder representing basic Quran lessons" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1597935258735-e254c1839512?q=80&w=400&auto=format&fit=crop" alt="Holy Quran open on rehal holder representing basic Quran lessons" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Kids</span>
               </div>
               <div class="blog-card-body">
@@ -1480,7 +1480,7 @@
             <!-- Article 7 -->
             <div class="blog-card" data-blog-category="comprehension">
               <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400&auto=format&fit=crop" alt="Computer screen with metrics and graphs" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400&auto=format&fit=crop" alt="Computer screen with metrics and graphs" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Branding</span>
               </div>
               <div class="blog-card-body">
@@ -1518,7 +1518,7 @@
             <!-- Article 8 -->
             <div class="blog-card" data-blog-category="beginners">
               <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1604881990409-b9f226b77230?q=80&w=400&auto=format&fit=crop" alt="Islamic geometric art and calligraphy representing focused learning" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1604881990409-b9f226b77230?q=80&w=400&auto=format&fit=crop" alt="Islamic geometric art and calligraphy representing focused learning" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Kids</span>
               </div>
               <div class="blog-card-body">
@@ -1557,7 +1557,7 @@
             <!-- Article 9 -->
             <div class="blog-card" data-blog-category="recitation">
               <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=400&auto=format&fit=crop" alt="Quiet study room reading book" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=400&auto=format&fit=crop" alt="Quiet study room reading book" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Recitation</span>
               </div>
               <div class="blog-card-body">
@@ -1597,7 +1597,7 @@
             <!-- Article 10 -->
             <div class="blog-card" data-blog-category="hifz">
               <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=400&auto=format&fit=crop" alt="Studying at home on a laptop" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=400&auto=format&fit=crop" alt="Studying at home on a laptop" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Academy</span>
               </div>
               <div class="blog-card-body">
@@ -1796,8 +1796,8 @@
 
   <!-- AI Chatbot Widget -->
   <div id="ai-chatbot-container">
-    <button id="ai-chatbot-toggle" aria-label="Open AI Assistant">
-      <i class="fa-solid fa-robot"></i>
+    <button id="ai-chatbot-toggle" aria-label="Open AI Assistant" aria-expanded="false" aria-controls="ai-chatbot-window">
+      <i class="fa-solid fa-robot" aria-hidden="true"></i>
       <span class="chatbot-pulse"></span>
     </button>
     
@@ -1805,7 +1805,7 @@
       <div class="chatbot-header">
         <div class="chatbot-brand">
           <div class="chatbot-avatar">
-            <i class="fa-solid fa-robot"></i>
+            <i class="fa-solid fa-robot" aria-hidden="true"></i>
           </div>
           <div>
             <h4>Quranic IQ Assistant</h4>
@@ -1813,7 +1813,7 @@
           </div>
         </div>
         <button id="ai-chatbot-close" aria-label="Close Chat">
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
       </div>
       
@@ -1826,9 +1826,9 @@
       </div>
       
       <div class="chatbot-input-area">
-        <input type="text" id="chatbot-input" placeholder="Type your question..." autocomplete="off">
+        <input type="text" id="chatbot-input" placeholder="Type your question..." autocomplete="off" aria-label="Ask a question to AI Assistant">
         <button id="chatbot-send" aria-label="Send Message">
-          <i class="fa-solid fa-paper-plane"></i>
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
         </button>
       </div>
     </div>

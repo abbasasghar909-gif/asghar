@@ -48,26 +48,30 @@ function initNavbar() {
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // Highlight links on scroll
-  window.addEventListener('scroll', () => {
-    // Highlight links on scroll
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (window.scrollY >= (sectionTop - 120)) {
-        current = section.getAttribute('id');
-      }
-    });
+  // Highlight links on scroll using IntersectionObserver for maximum scroll performance
+  const sections = document.querySelectorAll('section');
+  const observerOptions = {
+    root: null,
+    rootMargin: '-120px 0px -60% 0px',
+    threshold: 0
+  };
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').slice(1) === current) {
-        link.classList.add('active');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          if (link.getAttribute('href').slice(1) === id) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
       }
     });
-  });
+  }, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
 
   // Mobile navigation drawer toggle
   hamburger.addEventListener('click', () => {
@@ -817,21 +821,26 @@ function initAIChatbot() {
 
   // Toggle Chat window
   toggleBtn.addEventListener('click', () => {
-    chatWindow.classList.toggle('visible');
-    if (chatWindow.classList.contains('visible') && isFirstOpen) {
-      showTypingIndicator();
-      setTimeout(() => {
-        removeTypingIndicator();
-        sendBotMessage("Assalamu Alaikum! I am the Quranic IQ AI Assistant. How can I help you learn today? I can answer questions about our courses, tutors, schedules, and pricing, or guide you to book your 2 Free Trial Classes!");
-        showQuickReplies();
-      }, 800);
-      isFirstOpen = false;
+    const isVisible = chatWindow.classList.toggle('visible');
+    toggleBtn.setAttribute('aria-expanded', isVisible ? 'true' : 'false');
+    if (isVisible) {
+      if (isFirstOpen) {
+        showTypingIndicator();
+        setTimeout(() => {
+          removeTypingIndicator();
+          sendBotMessage("Assalamu Alaikum! I am the Quranic IQ AI Assistant. How can I help you learn today? I can answer questions about our courses, tutors, schedules, and pricing, or guide you to book your 2 Free Trial Classes!");
+          showQuickReplies();
+        }, 800);
+        isFirstOpen = false;
+      }
+      inputField.focus();
     }
-    inputField.focus();
   });
 
   closeBtn.addEventListener('click', () => {
     chatWindow.classList.remove('visible');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.focus();
   });
 
   // Send message on click/enter

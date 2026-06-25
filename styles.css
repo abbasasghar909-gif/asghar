@@ -846,11 +846,13 @@ button, input, select, textarea {
   opacity: 0;
   pointer-events: none;
   transition: var(--transition-smooth);
+  visibility: hidden;
 }
 
 .modal-overlay.active {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .modal-box {
@@ -2544,12 +2546,14 @@ select.form-control {
   transform: translateY(20px);
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 #ai-chatbot-window.visible {
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .chatbot-header {
@@ -2712,6 +2716,11 @@ select.form-control {
   font-size: 0.85rem;
   outline: none;
   transition: var(--transition-smooth);
+}
+
+#chatbot-input::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
 }
 
 #chatbot-input:focus {
