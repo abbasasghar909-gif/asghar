@@ -43,17 +43,27 @@ function minifyJS(js) {
 function build() {
   console.log('Starting build / minification...');
 
-  // HTML
-  const htmlSrc = fs.readFileSync(path.join(srcDir, 'index.html'), 'utf8');
-  const htmlMin = minifyHTML(htmlSrc);
-  fs.writeFileSync(path.join(destDir, 'index.html'), htmlMin, 'utf8');
-  console.log(`Minified index.html (${(htmlSrc.length / 1024).toFixed(2)} KB -> ${(htmlMin.length / 1024).toFixed(2)} KB)`);
-
   // CSS
   const cssSrc = fs.readFileSync(path.join(srcDir, 'styles.css'), 'utf8');
   const cssMin = minifyCSS(cssSrc);
   fs.writeFileSync(path.join(destDir, 'styles.css'), cssMin, 'utf8');
   console.log(`Minified styles.css (${(cssSrc.length / 1024).toFixed(2)} KB -> ${(cssMin.length / 1024).toFixed(2)} KB)`);
+
+  // Extract critical CSS from styles.css
+  const cssLines = cssSrc.split('\n');
+  const criticalCss = [
+    ...cssLines.slice(0, 631),
+    ...cssLines.slice(1861, 1990),
+    ...cssLines.slice(3078, 3130)
+  ].join('\n');
+  const criticalCssMin = minifyCSS(criticalCss);
+
+  // HTML
+  let htmlSrc = fs.readFileSync(path.join(srcDir, 'index.html'), 'utf8');
+  htmlSrc = htmlSrc.replace('<!-- CRITICAL_CSS -->', `<style>${criticalCssMin}</style>`);
+  const htmlMin = minifyHTML(htmlSrc);
+  fs.writeFileSync(path.join(destDir, 'index.html'), htmlMin, 'utf8');
+  console.log(`Minified index.html (${(htmlSrc.length / 1024).toFixed(2)} KB -> ${(htmlMin.length / 1024).toFixed(2)} KB) with critical CSS embedded`);
 
   // JS
   const jsSrc = fs.readFileSync(path.join(srcDir, 'app.js'), 'utf8');
