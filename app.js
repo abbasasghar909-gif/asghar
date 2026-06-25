@@ -744,12 +744,16 @@ function initBlog() {
     });
   }
 
+  let articlesCache = null;
+
   // Open Article Reader Modal
-  cards.forEach(card => {
+  cards.forEach((card, index) => {
     const readBtn = card.querySelector('.read-article-btn');
     if (!readBtn) return;
     
-    readBtn.addEventListener('click', () => {
+    const articleId = `article-${index + 1}`;
+    
+    readBtn.addEventListener('click', async () => {
       const category = card.querySelector('.blog-card-badge').textContent;
       const title = card.querySelector('.blog-card-title').textContent;
       const author = card.querySelector('.blog-card-author span').textContent;
@@ -759,23 +763,53 @@ function initBlog() {
       const date = metaSpanElements[0] ? metaSpanElements[0].textContent.trim() : '';
       const readtime = metaSpanElements[1] ? metaSpanElements[1].textContent.trim() : '';
       
-      const fullHtml = card.querySelector('.blog-full-content').innerHTML;
-
-      // Populate article modal
+      // Populate static details immediately
       if (modalCategory) modalCategory.textContent = category;
       if (modalTitle) modalTitle.textContent = title;
       if (modalAuthor) modalAuthor.textContent = author;
       if (modalDate) modalDate.textContent = date;
       if (modalReadtime) modalReadtime.textContent = readtime;
+      
+      // Clear body and show loading spinner
       if (modalBody) {
-        modalBody.innerHTML = fullHtml;
-        modalBody.className = 'modal-body modal-body-article'; // enforce styling class
+        modalBody.innerHTML = `
+          <div class="blog-modal-spinner">
+            <div class="spinner-icon"></div>
+            <p>Loading article...</p>
+          </div>
+        `;
+        modalBody.className = 'modal-body modal-body-article';
       }
 
       // Show modal
       if (modal) {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Lock main scrolling
+      }
+
+      // Fetch article asynchronously
+      try {
+        if (!articlesCache) {
+          const response = await fetch('articles.json');
+          if (!response.ok) throw new Error('Could not fetch articles.json');
+          articlesCache = await response.json();
+        }
+        
+        const fullContent = articlesCache[articleId] || '<p class="error-msg">Article not found.</p>';
+        
+        // Ensure the modal is still open and we are showing this article
+        if (modal && modal.classList.contains('active') && modalTitle && modalTitle.textContent === title) {
+          if (modalBody) {
+            modalBody.innerHTML = fullContent;
+          }
+        }
+      } catch (err) {
+        console.error('Error fetching article:', err);
+        if (modal && modal.classList.contains('active') && modalTitle && modalTitle.textContent === title) {
+          if (modalBody) {
+            modalBody.innerHTML = `<p class="error-msg" style="text-align: center; color: var(--text-muted); padding: 2rem;">Failed to load article. Please check your internet connection and try again.</p>`;
+          }
+        }
       }
     });
   });
