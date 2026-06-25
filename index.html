@@ -8,8 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="styles.css">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+  </noscript>
   <link rel="canonical" href="https://www.quraniciq.com">
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -24,7 +27,10 @@
   <meta name="twitter:description" content="Learn Quran online with certified Jamia tul Kausar tutors. Perfect your recitation, memorize Surahs, and use our custom Quranic vocabulary tracker. Book 2 Free Trial classes!">
   <meta name="twitter:image" content="https://www.quraniciq.com/assets/quran_classroom_banner.jpg">
   <!-- FontAwesome for Premium Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </noscript>
   <!-- JSON-LD Structured Schema Markup -->
   <script type="application/ld+json">
   {
@@ -86,11 +92,11 @@
           <i class="fa-solid fa-moon"></i>
         </button>
         <a href="#booking" class="btn btn-primary" id="nav-booking-cta">Free Trial<span class="hide-mobile"> Class</span></a>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </div>
     </div>
   </header>
@@ -326,7 +332,7 @@
   <!-- Modal overlay for course curriculum -->
   <div class="modal-overlay" id="curriculum-modal">
     <div class="modal-box">
-      <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="modal-close" id="modal-close" aria-label="Close curriculum modal"><i class="fa-solid fa-xmark"></i></button>
       <div class="modal-header-content">
         <span class="modal-tag" id="modal-course-tag">Noorani Qaida</span>
         <h3 class="modal-title" id="modal-course-title">Course Curriculum Details</h3>
@@ -359,30 +365,30 @@
           </div>
 
           <div class="calc-group">
-            <label>Lesson Duration</label>
-            <div class="calc-options-grid">
-              <button class="calc-opt-btn active" data-duration="30">30 Mins</button>
-              <button class="calc-opt-btn" data-duration="45">45 Mins</button>
-              <button class="calc-opt-btn" data-duration="60">60 Mins</button>
+            <span id="label-duration" class="calc-label">Lesson Duration</span>
+            <div class="calc-options-grid" role="radiogroup" aria-labelledby="label-duration">
+              <button class="calc-opt-btn active" data-duration="30" role="radio" aria-checked="true">30 Mins</button>
+              <button class="calc-opt-btn" data-duration="45" role="radio" aria-checked="false">45 Mins</button>
+              <button class="calc-opt-btn" data-duration="60" role="radio" aria-checked="false">60 Mins</button>
             </div>
           </div>
 
           <div class="calc-group">
-            <label>Instructor Preference</label>
-            <div class="calc-options-grid">
-              <button class="calc-opt-btn active" data-tutor-type="standard">Standard</button>
-              <button class="calc-opt-btn" data-tutor-type="senior">Senior Sheikh</button>
-              <button class="calc-opt-btn" data-tutor-type="ijazah">Ijazah Specialist</button>
+            <span id="label-tutor" class="calc-label">Instructor Preference</span>
+            <div class="calc-options-grid" role="radiogroup" aria-labelledby="label-tutor">
+              <button class="calc-opt-btn active" data-tutor-type="standard" role="radio" aria-checked="true">Standard</button>
+              <button class="calc-opt-btn" data-tutor-type="senior" role="radio" aria-checked="false">Senior Sheikh</button>
+              <button class="calc-opt-btn" data-tutor-type="ijazah" role="radio" aria-checked="false">Ijazah Specialist</button>
             </div>
           </div>
 
           <div class="calc-group">
-            <label>Number of Students (Family Discount)</label>
-            <div class="calc-options-grid calc-students-grid">
-              <button class="calc-opt-btn active" data-students="1">1 Student</button>
-              <button class="calc-opt-btn" data-students="2">2 Kids (15% Off)</button>
-              <button class="calc-opt-btn" data-students="3">3 Kids (25% Off)</button>
-              <button class="calc-opt-btn" data-students="4">4+ Kids (35% Off)</button>
+            <span id="label-students" class="calc-label">Number of Students (Family Discount)</span>
+            <div class="calc-options-grid calc-students-grid" role="radiogroup" aria-labelledby="label-students">
+              <button class="calc-opt-btn active" data-students="1" role="radio" aria-checked="true">1 Student</button>
+              <button class="calc-opt-btn" data-students="2" role="radio" aria-checked="false">2 Kids (15% Off)</button>
+              <button class="calc-opt-btn" data-students="3" role="radio" aria-checked="false">3 Kids (25% Off)</button>
+              <button class="calc-opt-btn" data-students="4" role="radio" aria-checked="false">4+ Kids (35% Off)</button>
             </div>
           </div>
         </div>
@@ -577,13 +583,13 @@
         </div>
 
         <div class="slider-nav">
-          <button class="slide-arrow slide-prev" id="tutor-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-          <button class="slide-arrow slide-next" id="tutor-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          <button class="slide-arrow slide-prev" id="tutor-prev-btn" aria-label="Previous tutor slide"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="slide-arrow slide-next" id="tutor-next-btn" aria-label="Next tutor slide"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <div class="slider-dots" id="tutor-dots">
-          <span class="slide-dot active" data-index="0"></span>
-          <span class="slide-dot" data-index="1"></span>
-          <span class="slide-dot" data-index="2"></span>
+          <button class="slide-dot active" data-index="0" aria-label="Go to tutor slide 1"></button>
+          <button class="slide-dot" data-index="1" aria-label="Go to tutor slide 2"></button>
+          <button class="slide-dot" data-index="2" aria-label="Go to tutor slide 3"></button>
         </div>
       </div>
     </div>
@@ -1147,16 +1153,16 @@
             <p class="booking-step-subtitle">Choose your convenient day and time bracket. All times shown are in your local timezone.</p>
 
             <div class="slots-container-form">
-              <div class="form-group">
-                <label>Preferred Lesson Days (Select Multiple)</label>
+              <fieldset class="form-group" style="border: none; padding: 0; margin: 0;">
+                <legend>Preferred Lesson Days (Select Multiple)</legend>
                 <div class="slots-days-select" id="form-days-select">
-                  <button class="slots-day-btn active" data-day="mon" type="button">Mon</button>
-                  <button class="slots-day-btn" data-day="wed" type="button">Wed</button>
-                  <button class="slots-day-btn" data-day="fri" type="button">Fri</button>
-                  <button class="slots-day-btn" data-day="sat" type="button">Sat</button>
-                  <button class="slots-day-btn" data-day="sun" type="button">Sun</button>
+                  <button class="slots-day-btn active" data-day="mon" type="button" aria-pressed="true">Mon</button>
+                  <button class="slots-day-btn" data-day="wed" type="button" aria-pressed="false">Wed</button>
+                  <button class="slots-day-btn" data-day="fri" type="button" aria-pressed="false">Fri</button>
+                  <button class="slots-day-btn" data-day="sat" type="button" aria-pressed="false">Sat</button>
+                  <button class="slots-day-btn" data-day="sun" type="button" aria-pressed="false">Sun</button>
                 </div>
-              </div>
+              </fieldset>
 
               <div class="form-grid-2">
                 <div class="form-group">
@@ -1646,10 +1652,10 @@
 
       <div class="faq-list">
         <div class="faq-item">
-          <div class="faq-header">
-            <h3 class="faq-question">Do you offer classes for children?</h3>
+          <button class="faq-header" type="button" aria-expanded="false">
+            <span class="faq-question">Do you offer classes for children?</span>
             <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </div>
+          </button>
           <div class="faq-body">
             <div class="faq-content">
               Yes, absolutely! We specialize in Quranic learning for children starting from age 5. Our certified <strong>Jamia tul Kausar University tutors</strong> are trained in child-friendly pedagogical methods, making lessons engaging, interactive, and fun.
@@ -1658,10 +1664,10 @@
         </div>
 
         <div class="faq-item">
-          <div class="faq-header">
-            <h3 class="faq-question">What online tools do I need for the class?</h3>
+          <button class="faq-header" type="button" aria-expanded="false">
+            <span class="faq-question">What online tools do I need for the class?</span>
             <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </div>
+          </button>
           <div class="faq-body">
             <div class="faq-content">
               All you need is a laptop, computer, or tablet with a working internet connection and headphones. Classes take place directly inside our virtual classroom, where you can access your personal <strong>Quranic vocabulary tracker</strong> to monitor progress, or via Zoom/Skype depending on your preference.
@@ -1670,10 +1676,10 @@
         </div>
 
         <div class="faq-item">
-          <div class="faq-header">
-            <h3 class="faq-question">Are there female instructors available?</h3>
+          <button class="faq-header" type="button" aria-expanded="false">
+            <span class="faq-question">Are there female instructors available?</span>
             <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </div>
+          </button>
           <div class="faq-body">
             <div class="faq-content">
               Yes, we have many qualified female instructors (Ustadhahs) certified in Hifz and Tajweed for our sisters and young children. You can specify your preference when filling out the trial booking form.
@@ -1682,10 +1688,10 @@
         </div>
 
         <div class="faq-item">
-          <div class="faq-header">
-            <h3 class="faq-question">How does the monthly subscription work?</h3>
+          <button class="faq-header" type="button" aria-expanded="false">
+            <span class="faq-question">How does the monthly subscription work?</span>
             <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </div>
+          </button>
           <div class="faq-body">
             <div class="faq-content">
               Tuition is calculated based on how many lessons per week you select and paid monthly. We support flexible scheduling, and any missed class can be rescheduled for free within 30 days. No long-term commitments; you can cancel anytime.
@@ -1764,7 +1770,7 @@
   <!-- Modal overlay for blog articles -->
   <div class="modal-overlay" id="blog-modal">
     <div class="modal-box modal-box-article">
-      <button class="modal-close" id="blog-modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="modal-close" id="blog-modal-close" aria-label="Close article modal"><i class="fa-solid fa-xmark"></i></button>
       <div class="modal-header-content">
         <span class="modal-tag" id="blog-modal-category">Tajweed Mastery</span>
         <h3 class="modal-title" id="blog-modal-title">Article Title Goes Here</h3>

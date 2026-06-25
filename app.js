@@ -71,11 +71,12 @@ function initNavbar() {
 
   // Mobile navigation drawer toggle
   hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    const isActive = navMenu.classList.toggle('active');
     hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
     // Animate hamburger lines
     const spans = hamburger.querySelectorAll('span');
-    if (navMenu.classList.contains('active')) {
+    if (isActive) {
       spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
       spans[1].style.opacity = '0';
       spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
@@ -90,6 +91,8 @@ function initNavbar() {
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('active');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
       // Reset hamburger
       const spans = hamburger.querySelectorAll('span');
       spans[0].style.transform = 'none';
@@ -297,8 +300,12 @@ function initCalculator() {
 
   durationBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      durationBtns.forEach(b => b.classList.remove('active'));
+      durationBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-checked', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-checked', 'true');
       classDuration = parseInt(btn.getAttribute('data-duration'));
       updatePricing();
     });
@@ -306,8 +313,12 @@ function initCalculator() {
 
   tutorTypeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      tutorTypeBtns.forEach(b => b.classList.remove('active'));
+      tutorTypeBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-checked', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-checked', 'true');
       tutorType = btn.getAttribute('data-tutor-type');
       updatePricing();
     });
@@ -315,8 +326,12 @@ function initCalculator() {
 
   studentsBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      studentsBtns.forEach(b => b.classList.remove('active'));
+      studentsBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-checked', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-checked', 'true');
       numStudents = parseInt(btn.getAttribute('data-students'));
       updatePricing();
     });
@@ -340,10 +355,14 @@ function initTutorSlider() {
 
   function showSlide(index) {
     slides.forEach(s => s.style.display = 'none');
-    dots.forEach(d => d.classList.remove('active'));
+    dots.forEach(d => {
+      d.classList.remove('active');
+      d.setAttribute('aria-current', 'false');
+    });
     
     slides[index].style.display = 'grid';
     dots[index].classList.add('active');
+    dots[index].setAttribute('aria-current', 'true');
     currentSlide = index;
   }
 
@@ -537,7 +556,8 @@ function initBookingForm() {
   const daySelectorBtns = document.querySelectorAll('#form-days-select .slots-day-btn');
   daySelectorBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
+      const isActive = btn.classList.toggle('active');
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
   });
 
@@ -566,11 +586,14 @@ function initFaqAccordion() {
       // Close all other items
       faqItems.forEach(i => {
         i.classList.remove('active');
+        const h = i.querySelector('.faq-header');
+        if (h) h.setAttribute('aria-expanded', 'false');
         i.querySelector('.faq-toggle-icon').innerHTML = '<i class="fa-solid fa-plus"></i>';
       });
       
       if (!isActive) {
         item.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
         item.querySelector('.faq-toggle-icon').innerHTML = '<i class="fa-solid fa-minus"></i>';
       }
     });
