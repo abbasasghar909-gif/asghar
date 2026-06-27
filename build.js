@@ -65,6 +65,12 @@ function build() {
   fs.writeFileSync(path.join(destDir, 'index.html'), htmlMin, 'utf8');
   console.log(`Minified index.html (${(htmlSrc.length / 1024).toFixed(2)} KB -> ${(htmlMin.length / 1024).toFixed(2)} KB) with critical CSS embedded`);
 
+  // Guide HTML
+  const guideSrc = fs.readFileSync(path.join(srcDir, 'quran-iq-guide.html'), 'utf8');
+  const guideMin = minifyHTML(guideSrc);
+  fs.writeFileSync(path.join(destDir, 'quran-iq-guide.html'), guideMin, 'utf8');
+  console.log(`Minified quran-iq-guide.html (${(guideSrc.length / 1024).toFixed(2)} KB -> ${(guideMin.length / 1024).toFixed(2)} KB)`);
+
   // JS
   const jsSrc = fs.readFileSync(path.join(srcDir, 'app.js'), 'utf8');
   const jsMin = minifyJS(jsSrc);
