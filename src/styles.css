@@ -3152,3 +3152,15 @@ select.form-control {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* Blog Internal Links for Topic Clustering */
+.blog-internal-link {
+  color: var(--accent-gold);
+  text-decoration: underline;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+.blog-internal-link:hover {
+  color: var(--accent-gold-hover);
+  text-shadow: 0 0 5px var(--accent-gold-glow);
+}
