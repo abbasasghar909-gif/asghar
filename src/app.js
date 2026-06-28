@@ -2,6 +2,7 @@
  
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initStats();
   initNavbar();
   initCourseModal();
   initCalculator();
@@ -12,6 +13,23 @@ document.addEventListener('DOMContentLoaded', () => {
   initBlog();
   initAIChatbot();
 });
+
+// Dynamic Stats Loader
+function initStats() {
+  fetch('stats.json')
+    .then(res => res.json())
+    .then(data => {
+      const studentsEl = document.getElementById('stat-students');
+      const tutorsEl = document.getElementById('stat-tutors');
+      const ratingEl = document.getElementById('stat-rating');
+      const studyingEl = document.getElementById('stat-studying');
+      if (studentsEl && data.activeLearners) studentsEl.textContent = data.activeLearners;
+      if (tutorsEl && data.certifiedSheikhs) tutorsEl.textContent = data.certifiedSheikhs;
+      if (ratingEl && data.trustpilotRating) ratingEl.textContent = data.trustpilotRating;
+      if (studyingEl && data.studyingRightNow) studyingEl.textContent = data.studyingRightNow;
+    })
+    .catch(err => console.log('Error loading stats from stats.json, using static values:', err));
+}
 
 // 1. Theme Management (Dark/Light Mode)
 function initTheme() {

@@ -71,6 +71,18 @@ function build() {
   fs.writeFileSync(path.join(destDir, 'quran-iq-guide.html'), guideMin, 'utf8');
   console.log(`Minified quran-iq-guide.html (${(guideSrc.length / 1024).toFixed(2)} KB -> ${(guideMin.length / 1024).toFixed(2)} KB)`);
 
+  // Privacy HTML
+  const privacySrc = fs.readFileSync(path.join(srcDir, 'privacy.html'), 'utf8');
+  const privacyMin = minifyHTML(privacySrc);
+  fs.writeFileSync(path.join(destDir, 'privacy.html'), privacyMin, 'utf8');
+  console.log(`Minified privacy.html (${(privacySrc.length / 1024).toFixed(2)} KB -> ${(privacyMin.length / 1024).toFixed(2)} KB)`);
+
+  // Terms HTML
+  const termsSrc = fs.readFileSync(path.join(srcDir, 'terms.html'), 'utf8');
+  const termsMin = minifyHTML(termsSrc);
+  fs.writeFileSync(path.join(destDir, 'terms.html'), termsMin, 'utf8');
+  console.log(`Minified terms.html (${(termsSrc.length / 1024).toFixed(2)} KB -> ${(termsMin.length / 1024).toFixed(2)} KB)`);
+
   // JS
   const jsSrc = fs.readFileSync(path.join(srcDir, 'app.js'), 'utf8');
   const jsMin = minifyJS(jsSrc);

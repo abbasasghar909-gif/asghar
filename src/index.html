@@ -39,30 +39,121 @@
   </noscript>
   <!-- JSON-LD Structured Schema Markup -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Quranic IQ Academy",
-    "url": "https://www.quraniciq.com",
-    "logo": "https://www.quraniciq.com/assets/logo.png",
-    "description": "Learn Quran online with certified Jamia tul Kausar tutors. Personalized 1-on-1 Hifz, Tajweed, Arabic, and Islamic studies for kids & adults.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Islamabad",
-      "addressCountry": "PK"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Quranic IQ Academy",
+      "url": "https://www.quraniciq.com",
+      "logo": "https://www.quraniciq.com/assets/logo.png",
+      "description": "Learn Quran online with certified Jamia tul Kausar tutors. Personalized 1-on-1 Hifz, Tajweed, Arabic, and Islamic studies for kids & adults.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Islamabad",
+        "addressCountry": "PK"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+92-304-4719851",
+        "contactType": "customer support",
+        "email": "info@quraniciq.com"
+      },
+      "sameAs": [
+        "https://www.facebook.com/quraniciq",
+        "https://www.instagram.com/quraniciq",
+        "https://www.youtube.com/@quraniciq"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "215",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+92-304-4719851",
-      "contactType": "customer support",
-      "email": "info@quraniciq.com"
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Noorani Qaida for Kids & Adults",
+      "description": "Master pronunciation of the Arabic alphabet and basic phonics using the classic Noorani Qaida curriculum.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Quranic IQ Academy",
+        "url": "https://www.quraniciq.com"
+      }
     },
-    "sameAs": [
-      "https://www.facebook.com/quraniciq",
-      "https://www.instagram.com/quraniciq",
-      "https://www.youtube.com/quraniciq"
-    ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Quran Reading with Tajweed",
+      "description": "Learn complex Tajweed rules, correct pronunciation points (Makharij), and stopping signs (Waqf) for fluent Quran recitation.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Quranic IQ Academy",
+        "url": "https://www.quraniciq.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Quran Memorization (Hifz)",
+      "description": "Systematic Hifz classes using modern spaced repetition, memory triggers, and vocabulary tracking for kids and adults.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Quranic IQ Academy",
+        "url": "https://www.quraniciq.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Word-by-Word Quran Translation",
+      "description": "Deconstruct Arabic words and sentences to build semantic comprehension and vocabulary retention of the Holy Quran.",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Quranic IQ Academy",
+        "url": "https://www.quraniciq.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you offer classes for children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely! We specialize in Quranic learning for children starting from age 5. Our certified Jamia tul Kausar University tutors are trained in child-friendly pedagogical methods, making lessons engaging, interactive, and fun."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What online tools do I need for the class?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All you need is a laptop, computer, or tablet with a working internet connection and headphones. Classes take place directly inside our virtual classroom, where you can access your personal Quranic vocabulary tracker to monitor progress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there female instructors available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we have many qualified female instructors (Ustadhahs) certified in Hifz and Tajweed for our sisters and young children. You can specify your preference when filling out the trial booking form."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the monthly subscription work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tuition is calculated based on how many lessons per week you select and paid monthly. We support flexible scheduling, and any missed class can be rescheduled for free within 30 days. No long-term commitments; you can cancel anytime."
+          }
+        }
+      ]
+    }
+  ]
   </script>
 </head>
 <body data-theme="dark">
@@ -78,7 +169,7 @@
     </div>
 
     <div class="container nav-container">
-      <a href="#" class="logo-wrapper">
+      <a href="index.html" class="logo-wrapper">
         <div class="logo-icon">ق</div>
         <span class="logo-text">Quranic IQ</span>
       </a>
@@ -114,7 +205,7 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="hero-badge-dot"></span>
-          WASC Accredited Academy
+          Certified Jamia tul Kausar Tutors
         </div>
         <h1 class="hero-title">Learn Quran Online & Elevate Your Quranic IQ</h1>
         <p class="hero-desc">
@@ -133,10 +224,12 @@
             <span class="stat-num" id="stat-tutors">60+</span>
             <span class="stat-label">Certified Sheikhs</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-num" id="stat-rating">4.9/5</span>
-            <span class="stat-label">Trustpilot Rating</span>
-          </div>
+          <a href="https://www.trustpilot.com/review/quraniciq.com" target="_blank" rel="noopener noreferrer" class="stat-item-link" style="text-decoration: none; color: inherit;">
+            <div class="stat-item">
+              <span class="stat-num" id="stat-rating">4.9/5</span>
+              <span class="stat-label">Trustpilot Rating <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 2px;"></i></span>
+            </div>
+          </a>
         </div>
       </div>
       
@@ -162,7 +255,7 @@
             <div class="live-session-users" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--bg-secondary); border: 1px solid var(--glass-border); color: var(--accent-gold); margin-right: 0.25rem;">
               <i class="fa-solid fa-users"></i>
             </div>
-            <span>+150 studying right now</span>
+            <span id="stat-studying">+150 studying right now</span>
           </div>
         </div>
       </div>
@@ -452,6 +545,17 @@
           </div>
 
           <a href="#booking" class="btn btn-primary" id="calc-cta-btn">Book This Schedule</a>
+          <!-- Secure Payment & Cancellation Trust Signals -->
+          <div class="secure-payment-signals" style="margin-top: 1.5rem; text-align: center; border-top: 1px solid var(--glass-border); padding-top: 1.25rem;">
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.4;">
+              <i class="fa-solid fa-rotate-left" style="color: var(--accent-gold); margin-right: 4px;"></i> <strong>100% Refund Policy:</strong> Unused lessons can be refunded or rescheduled within 30 days. Cancel anytime.
+            </p>
+            <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; opacity: 0.75; font-size: 0.8rem; color: var(--text-muted);">
+              <span><i class="fa-solid fa-lock" style="color: var(--emerald-bright); margin-right: 4px;"></i> SSL Secure Connection</span>
+              <span class="dot-separator">•</span>
+              <span><i class="fa-brands fa-cc-stripe" style="font-size: 1.15rem; vertical-align: middle; margin-right: 4px;"></i> Stripe Checkout</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -543,7 +647,7 @@
           <!-- Slide 2 -->
           <div class="tutor-slide" style="display:none;">
             <div class="tutor-img-box">
-              <img src="assets/tutor2_profile.jpg" alt="Ustadhah Sadia Rehman - Arabic & Urdu Language Instructor at Quranic IQ Academy" loading="lazy" width="400" height="400">
+              <img src="assets/sadia_rehman.jpg" alt="Ustadhah Sadia Rehman - Arabic & Urdu Language Instructor at Quranic IQ Academy" loading="lazy" width="400" height="400">
               <span class="tutor-badge-overlay">🎓 Urdu & Arabic Scholar</span>
             </div>
             <div class="tutor-details">
@@ -577,7 +681,7 @@
           <!-- Slide 3 -->
           <div class="tutor-slide" style="display:none;">
             <div class="tutor-img-box">
-              <img src="assets/tutor3_profile.jpg" alt="Sheikh Mohammad Amin - Quran Tafsir & Translation Specialist at Quranic IQ Academy" loading="lazy" width="400" height="400">
+              <img src="assets/mohammad_amin.jpg" alt="Sheikh Mohammad Amin - Quran Tafsir & Translation Specialist at Quranic IQ Academy" loading="lazy" width="400" height="400">
               <span class="tutor-badge-overlay">🎓 M.A. Tafsir (Jamia tul Kausar)</span>
             </div>
             <div class="tutor-details">
@@ -765,7 +869,7 @@
         </div>
 
         <!-- Card 7 -->
-        <div class="testimonial-card" data-category="recitation">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="recitation">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(320,65%,45%), hsl(45,80%,52%));">MA</div>
@@ -786,7 +890,7 @@
         </div>
 
         <!-- Card 8 -->
-        <div class="testimonial-card" data-category="tajweed">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="tajweed">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(210,80%,45%), hsl(120,60%,35%));">BS</div>
@@ -807,7 +911,7 @@
         </div>
 
         <!-- Card 9 -->
-        <div class="testimonial-card" data-category="recitation">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="recitation">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(35,80%,52%), hsl(290,60%,40%));">AB</div>
@@ -828,7 +932,7 @@
         </div>
 
         <!-- Card 10 -->
-        <div class="testimonial-card" data-category="tajweed">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="tajweed">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(180,60%,35%), hsl(45,80%,52%));">HF</div>
@@ -849,7 +953,7 @@
         </div>
 
         <!-- Card 11 -->
-        <div class="testimonial-card" data-category="recitation">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="recitation">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(330,75%,45%), hsl(220,80%,45%));">SP</div>
@@ -870,7 +974,7 @@
         </div>
 
         <!-- Card 12 -->
-        <div class="testimonial-card" data-category="tajweed">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="tajweed">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(140,55%,35%), hsl(45,80%,52%));">MH</div>
@@ -891,7 +995,7 @@
         </div>
 
         <!-- Card 13 -->
-        <div class="testimonial-card" data-category="recitation">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="recitation">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(310,60%,40%), hsl(200,70%,40%));">ZS</div>
@@ -912,7 +1016,7 @@
         </div>
 
         <!-- Card 14 -->
-        <div class="testimonial-card" data-category="tajweed">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="tajweed">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(230,70%,40%), hsl(160,80%,35%));">LA</div>
@@ -933,7 +1037,7 @@
         </div>
 
         <!-- Card 15 -->
-        <div class="testimonial-card" data-category="recitation">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="recitation">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(340,75%,45%), hsl(45,80%,52%));">LM</div>
@@ -954,7 +1058,7 @@
         </div>
 
         <!-- Card 16 -->
-        <div class="testimonial-card" data-category="tajweed">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="tajweed">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(20,80%,50%), hsl(200,70%,40%));">OB</div>
@@ -975,7 +1079,7 @@
         </div>
 
         <!-- Card 17 -->
-        <div class="testimonial-card" data-category="recitation">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="recitation">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(325,70%,40%), hsl(45,80%,52%));">HY</div>
@@ -996,7 +1100,7 @@
         </div>
 
         <!-- Card 18 -->
-        <div class="testimonial-card" data-category="tajweed">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="tajweed">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(220,70%,40%), hsl(120,60%,35%));">TA</div>
@@ -1017,7 +1121,7 @@
         </div>
 
         <!-- Card 19 -->
-        <div class="testimonial-card" data-category="recitation">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="recitation">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(160,80%,35%), hsl(45,80%,52%));">ND</div>
@@ -1038,7 +1142,7 @@
         </div>
 
         <!-- Card 20 -->
-        <div class="testimonial-card" data-category="tajweed">
+        <div class="testimonial-card hidden-review" style="display: none;" data-category="tajweed">
           <div class="testimonial-header">
             <div class="student-meta">
               <div class="student-initial" style="background: linear-gradient(135deg, hsl(290,60%,40%), hsl(200,70%,40%));">RC</div>
@@ -1213,6 +1317,10 @@
           </div>
 
           <!-- Actions -->
+          <!-- Terms & Privacy Disclaimer -->
+          <p class="form-disclaimer" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; text-align: center;">
+            By submitting, you agree to our <a href="privacy.html" target="_blank" style="color: var(--accent-gold); text-decoration: underline;">Privacy Policy</a> and <a href="terms.html" target="_blank" style="color: var(--accent-gold); text-decoration: underline;">Terms of Service</a>.
+          </p>
           <div class="booking-actions">
             <button class="btn btn-secondary" id="form-prev-btn" style="display:none;" type="button">Back</button>
             <button class="btn btn-primary" id="form-next-btn" style="margin-left: auto;" type="button">Continue</button>
@@ -1285,7 +1393,7 @@
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> June 25, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Reciting with Melodious Rhythm: The Sunnah of Beautiful Quran Reading</h3>
@@ -1308,7 +1416,7 @@
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> June 23, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Noorani Qaida & Tajweed for Kids and Beginners</h3>
@@ -1331,7 +1439,7 @@
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> June 20, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Understanding Waqf & Ibtida: The Crucial Rules of Pausing and Breathing</h3>
@@ -1354,7 +1462,7 @@
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> June 18, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Study Quran Under Licensed Scholars (Ijazah Holders)</h3>
@@ -1377,7 +1485,7 @@
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> June 15, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Stress Relief & Focus: The Science Behind Quranic Sound Waves</h3>
@@ -1393,14 +1501,14 @@
             </div>
 
             <!-- Article 17 -->
-            <div class="blog-card" data-blog-category="beginners">
+            <div class="blog-card" style="display: none;" data-blog-category="beginners">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=50&w=200&auto=format&fit=crop" alt="Personalized 1-on-1 Classrooms vs Crowded Classrooms" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Kids</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> June 12, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Personalized 1-on-1 Classrooms vs Crowded Classrooms</h3>
@@ -1416,14 +1524,14 @@
             </div>
 
             <!-- Article 18 -->
-            <div class="blog-card" data-blog-category="recitation">
+            <div class="blog-card" style="display: none;" data-blog-category="recitation">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=50&w=200&auto=format&fit=crop" alt="Major vs Minor Recitation Errors (Lahn Jali & Lahn Khafi)" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Tajweed</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> June 10, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Major vs Minor Recitation Errors (Lahn Jali & Lahn Khafi)</h3>
@@ -1439,14 +1547,14 @@
             </div>
 
             <!-- Article 19 -->
-            <div class="blog-card" data-blog-category="beginners">
+            <div class="blog-card" style="display: none;" data-blog-category="beginners">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=50&w=200&auto=format&fit=crop" alt="Teaching Kids Quran Recitation: A Gift for Life" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Kids</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> June 07, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Teaching Kids Quran Recitation: A Gift for Life</h3>
@@ -1462,14 +1570,14 @@
             </div>
 
             <!-- Article 20 -->
-            <div class="blog-card" data-blog-category="recitation">
+            <div class="blog-card" style="display: none;" data-blog-category="recitation">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=50&w=200&auto=format&fit=crop" alt="Begin Your Custom Tajweed Study Program Today" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Recitation</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> June 05, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Begin Your Custom Tajweed Study Program Today</h3>
@@ -1485,14 +1593,14 @@
             </div>
 
             <!-- Article 21 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Recitation vs Comprehension: Connect with the Message" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Comprehension</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> May 28, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Recitation vs Comprehension: Connect with the Message</h3>
@@ -1508,14 +1616,14 @@
             </div>
 
             <!-- Article 22 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=50&w=200&auto=format&fit=crop" alt="The Power of Arabic Root Words in Quranic Vocabulary" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Vocabulary</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> May 25, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">The Power of Arabic Root Words in Quranic Vocabulary</h3>
@@ -1531,14 +1639,14 @@
             </div>
 
             <!-- Article 23 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=50&w=200&auto=format&fit=crop" alt="Developing Spiritual Intelligence (Tadabbur) Daily" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Reflection</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> May 20, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Developing Spiritual Intelligence (Tadabbur) Daily</h3>
@@ -1554,14 +1662,14 @@
             </div>
 
             <!-- Article 24 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=50&w=200&auto=format&fit=crop" alt="Practical Life Solutions Guided by the Quran" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Guidance</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> May 18, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Practical Life Solutions Guided by the Quran</h3>
@@ -1577,14 +1685,14 @@
             </div>
 
             <!-- Article 25 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=50&w=200&auto=format&fit=crop" alt="Linguistic Mapping: Word-by-Word Translation Methods" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Linguistics</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> May 15, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Linguistic Mapping: Word-by-Word Translation Methods</h3>
@@ -1600,14 +1708,14 @@
             </div>
 
             <!-- Article 26 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=50&w=200&auto=format&fit=crop" alt="Dynamic Student Portals for Vocabulary and Quizzes" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Portal</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> May 12, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Dynamic Student Portals for Vocabulary and Quizzes</h3>
@@ -1623,14 +1731,14 @@
             </div>
 
             <!-- Article 27 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1584281729288-dd77a5f2ec49?q=50&w=200&auto=format&fit=crop" alt="Building Your Quranic IQ: A Modern Approach to Literacy" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Quranic IQ</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> May 10, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Building Your Quranic IQ: A Modern Approach to Literacy</h3>
@@ -1646,14 +1754,14 @@
             </div>
 
             <!-- Article 28 -->
-            <div class="blog-card" data-blog-category="beginners">
+            <div class="blog-card" style="display: none;" data-blog-category="beginners">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Stories of the Prophets: Engaging Comprehension for Kids" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Kids</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> May 05, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Stories of the Prophets: Engaging Comprehension for Kids</h3>
@@ -1669,14 +1777,14 @@
             </div>
 
             <!-- Article 29 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=50&w=200&auto=format&fit=crop" alt="The Complete Guide to Quranic IQ & Growth Is Live" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Guide</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> May 02, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">The Complete Guide to Quranic IQ & Growth Is Live</h3>
@@ -1692,14 +1800,14 @@
             </div>
 
             <!-- Article 30 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Schedule Your Free Trial Class for Translation & Vocab" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Trial</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> April 28, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">Schedule Your Free Trial Class for Translation & Vocab</h3>
@@ -1715,14 +1823,14 @@
             </div>
 
             <!-- Article 1 -->
-            <div class="blog-card" data-blog-category="recitation">
+            <div class="blog-card" style="display: none;" data-blog-category="recitation">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=50&w=200&auto=format&fit=crop" alt="Quran book open for recitation" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Recitation</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 20, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> April 25, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 6 min read</span>
                 </div>
                 <h3 class="blog-card-title">Mastering Quran Recitation with Tajweed: The Ultimate Beginner's Guide</h3>
@@ -1740,14 +1848,14 @@
             </div>
 
             <!-- Article 2 -->
-            <div class="blog-card" data-blog-category="recitation">
+            <div class="blog-card" style="display: none;" data-blog-category="recitation">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Islamic architecture interior" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Tajweed</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 18, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> April 20, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">10 Essential Tajweed Rules Every Quran Reader Must Learn</h3>
@@ -1765,14 +1873,14 @@
             </div>
 
             <!-- Article 3 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=50&w=200&auto=format&fit=crop" alt="Classical Arabic book open" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Vocabulary</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 15, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> April 18, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 7 min read</span>
                 </div>
                 <h3 class="blog-card-title">How to Master Arabic Root Words with a Quranic Vocabulary Tracker</h3>
@@ -1790,14 +1898,14 @@
             </div>
 
             <!-- Article 4 -->
-            <div class="blog-card" data-blog-category="hifz">
+            <div class="blog-card" style="display: none;" data-blog-category="hifz">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=50&w=200&auto=format&fit=crop" alt="Person studying with notebook and coffee" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Hifz</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 12, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> April 15, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 8 min read</span>
                 </div>
                 <h3 class="blog-card-title">Quran Memorization (Hifz) for Busy Adults: Practical Strategies</h3>
@@ -1815,14 +1923,14 @@
             </div>
 
             <!-- Article 5 -->
-            <div class="blog-card" data-blog-category="recitation">
+            <div class="blog-card" style="display: none;" data-blog-category="recitation">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?q=50&w=200&auto=format&fit=crop" alt="Mosque minarets dome and crescent moon representing Arabic and Islamic tutors" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Instructors</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 10, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> April 12, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 6 min read</span>
                 </div>
                 <h3 class="blog-card-title">The Role of Native Arabic Tutors in Perfecting Quran Pronunciation</h3>
@@ -1840,14 +1948,14 @@
             </div>
 
             <!-- Article 6 -->
-            <div class="blog-card" data-blog-category="beginners">
+            <div class="blog-card" style="display: none;" data-blog-category="beginners">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1597935258735-e254c1839512?q=50&w=200&auto=format&fit=crop" alt="Holy Quran open on rehal holder representing basic Quran lessons" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Kids</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 07, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> April 08, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">A Parents' Guide to Noorani Qaida: Teaching Kids Quran Reading</h3>
@@ -1865,14 +1973,14 @@
             </div>
 
             <!-- Article 7 -->
-            <div class="blog-card" data-blog-category="comprehension">
+            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=50&w=200&auto=format&fit=crop" alt="Computer screen with metrics and graphs" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Branding</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 05, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> April 05, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 5 min read</span>
                 </div>
                 <h3 class="blog-card-title">What is Quranic IQ? Elevating Your Spiritual and Intellectual Growth</h3>
@@ -1890,14 +1998,14 @@
             </div>
 
             <!-- Article 8 -->
-            <div class="blog-card" data-blog-category="beginners">
+            <div class="blog-card" style="display: none;" data-blog-category="beginners">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1604881990409-b9f226b77230?q=50&w=200&auto=format&fit=crop" alt="Islamic geometric art and calligraphy representing focused learning" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Kids</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 02, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> April 02, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 6 min read</span>
                 </div>
                 <h3 class="blog-card-title">Tips to Help Kids Focus During Online Quran Sessions</h3>
@@ -1915,14 +2023,14 @@
             </div>
 
             <!-- Article 9 -->
-            <div class="blog-card" data-blog-category="recitation">
+            <div class="blog-card" style="display: none;" data-blog-category="recitation">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=50&w=200&auto=format&fit=crop" alt="Quiet study room reading book" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Recitation</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> May 28, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> March 28, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 7 min read</span>
                 </div>
                 <h3 class="blog-card-title">The Scientific and Spiritual Benefits of Daily Quran Recitation</h3>
@@ -1940,14 +2048,14 @@
             </div>
 
             <!-- Article 10 -->
-            <div class="blog-card" data-blog-category="hifz">
+            <div class="blog-card" style="display: none;" data-blog-category="hifz">
               <div class="blog-card-banner">
                 <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=50&w=200&auto=format&fit=crop" alt="Studying at home on a laptop" loading="lazy" width="400" height="250">
                 <span class="blog-card-badge">Academy</span>
               </div>
               <div class="blog-card-body">
                 <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> May 25, 2026</span>
+                  <span><i class="fa-regular fa-calendar"></i> March 25, 2026</span>
                   <span><i class="fa-regular fa-clock"></i> 8 min read</span>
                 </div>
                 <h3 class="blog-card-title">Online Quran Academy vs. Local Mosque Classes: A Modern Comparison</h3>
@@ -2088,7 +2196,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Quranic IQ Academy. All rights reserved. Registered Educational Organization.</p>
+        <p>&copy; 2026 Quranic IQ Academy. All rights reserved. Registered Educational Organization. | <a href="privacy.html" style="color: var(--text-muted); text-decoration: underline; margin-right: 10px;">Privacy Policy</a> <a href="terms.html" style="color: var(--text-muted); text-decoration: underline;">Terms of Service</a></p>
         <div class="footer-certs">
           <!-- Mock certificates showing security/accreditation -->
           <i class="fa-brands fa-stripe fa-2x" style="opacity: 0.6;" title="Stripe Secure Payments"></i>
@@ -2104,14 +2212,14 @@
       <button class="modal-close" id="blog-modal-close" aria-label="Close article modal"><i class="fa-solid fa-xmark"></i></button>
       <div class="modal-header-content">
         <span class="modal-tag" id="blog-modal-category">Tajweed Mastery</span>
-        <h3 class="modal-title" id="blog-modal-title">Article Title Goes Here</h3>
+        <h3 class="modal-title" id="blog-modal-title">Loading Article...</h3>
         <div class="blog-modal-author-row">
           <div class="author-avatar"><i class="fa-solid fa-user-tie"></i></div>
-          <span id="blog-modal-author">Author Name</span>
+          <span id="blog-modal-author">Loading Author...</span>
           <span class="dot-separator">•</span>
-          <span id="blog-modal-date">Date</span>
+          <span id="blog-modal-date">...</span>
           <span class="dot-separator">•</span>
-          <span id="blog-modal-readtime">5 min read</span>
+          <span id="blog-modal-readtime">...</span>
         </div>
       </div>
       <div class="modal-body modal-body-article" id="blog-modal-body">

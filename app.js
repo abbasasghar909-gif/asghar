@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 initTheme();
+initStats();
 initNavbar();
 initCourseModal();
 initCalculator();
@@ -9,7 +10,21 @@ initFaqAccordion();
 initTestimonials();
 initBlog();
 initAIChatbot();
-});function initTheme() {
+});function initStats() {
+fetch('stats.json')
+.then(res => res.json())
+.then(data => {
+const studentsEl = document.getElementById('stat-students');
+const tutorsEl = document.getElementById('stat-tutors');
+const ratingEl = document.getElementById('stat-rating');
+const studyingEl = document.getElementById('stat-studying');
+if (studentsEl && data.activeLearners) studentsEl.textContent = data.activeLearners;
+if (tutorsEl && data.certifiedSheikhs) tutorsEl.textContent = data.certifiedSheikhs;
+if (ratingEl && data.trustpilotRating) ratingEl.textContent = data.trustpilotRating;
+if (studyingEl && data.studyingRightNow) studyingEl.textContent = data.studyingRightNow;
+})
+.catch(err => console.log('Error loading stats from stats.json, using static values:', err));
+}function initTheme() {
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;const savedTheme = localStorage.getItem('theme') || 'dark';
 body.setAttribute('data-theme', savedTheme);
