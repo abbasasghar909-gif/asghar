@@ -101,6 +101,22 @@ function build() {
   fs.writeFileSync(path.join(destDir, 'faq.html'), faqMin, 'utf8');
   console.log(`Minified faq.html (${(faqSrc.length / 1024).toFixed(2)} KB -> ${(faqMin.length / 1024).toFixed(2)} KB)`);
 
+  // Course Landing Pages HTML
+  const coursesList = [
+    'online-quran-classes.html',
+    'noorani-qaida.html',
+    'quran-with-tajweed.html',
+    'hifz-program.html',
+    'quran-translation.html',
+    'quran-tafsir.html'
+  ];
+  coursesList.forEach(file => {
+    const src = fs.readFileSync(path.join(srcDir, file), 'utf8');
+    const min = minifyHTML(src);
+    fs.writeFileSync(path.join(destDir, file), min, 'utf8');
+    console.log(`Minified ${file} (${(src.length / 1024).toFixed(2)} KB -> ${(min.length / 1024).toFixed(2)} KB)`);
+  });
+
   // JS
   const jsSrc = fs.readFileSync(path.join(srcDir, 'app.js'), 'utf8');
   const jsMin = minifyJS(jsSrc);
