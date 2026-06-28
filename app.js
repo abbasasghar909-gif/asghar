@@ -26,6 +26,7 @@ if (studyingEl && data.studyingRightNow) studyingEl.textContent = data.studyingR
 .catch(err => console.log('Error loading stats from data/stats.json, using static values:', err));
 }function initTheme() {
 const themeToggle = document.getElementById('theme-toggle');
+if (!themeToggle) return;
 const body = document.body;const savedTheme = localStorage.getItem('theme') || 'dark';
 body.setAttribute('data-theme', savedTheme);
 updateThemeIcon(savedTheme);themeToggle.addEventListener('click', () => {
@@ -46,6 +47,7 @@ icon.className = 'fa-solid fa-moon';
 const header = document.getElementById('header');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
+if (!hamburger || !navMenu) return;
 const navLinks = document.querySelectorAll('.nav-link');const sections = document.querySelectorAll('section');
 const observerOptions = {
 root: null,
@@ -182,6 +184,7 @@ modal.classList.remove('active');
 });
 }function initCalculator() {
 const classesSlider = document.getElementById('classes-per-week');
+if (!classesSlider) return;
 const classesBubble = document.getElementById('classes-bubble');
 const durationBtns = document.querySelectorAll('[data-duration]');
 const tutorTypeBtns = document.querySelectorAll('[data-tutor-type]');
@@ -265,6 +268,7 @@ updatePricing();
 });updatePricing();
 }function initTutorSlider() {
 const slides = document.querySelectorAll('.tutor-slide');
+if (!slides || !slides.length) return;
 const prevBtn = document.getElementById('tutor-prev-btn');
 const nextBtn = document.getElementById('tutor-next-btn');
 const dots = document.querySelectorAll('#tutor-dots .slide-dot');
@@ -337,6 +341,7 @@ btn.innerHTML = '<i class="fa-solid fa-volume-high"></i> Listen to Recitation De
 });
 }function initBookingForm() {
 const form = document.getElementById('booking-form');
+if (!form) return;
 const steps = document.querySelectorAll('.booking-step');
 const indicators = document.querySelectorAll('.progress-step-indicator');
 const barFill = document.getElementById('form-progress-bar');

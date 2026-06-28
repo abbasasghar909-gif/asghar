@@ -237,10 +237,10 @@
         <a href="#hero" class="nav-link active">Home</a>
         <a href="#why-us" class="nav-link">Why Us</a>
         <a href="#courses" class="nav-link">Quranic Studies</a>
-        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
         <a href="#tutors" class="nav-link">Tutors</a>
-        <a href="#blog" class="nav-link">Blog</a>
-        <a href="#faq" class="nav-link">FAQs</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="faq.html" class="nav-link">FAQs</a>
       </nav>
 
       <div class="header-actions">
@@ -582,131 +582,52 @@
   <section class="section" id="pricing" style="background-color: var(--bg-secondary);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Pricing Calculator</span>
-        <h2 class="section-title">Estimate Your Monthly Tuition</h2>
-        <p class="section-subtitle">Select your schedule details using the interactive controls to calculate custom monthly pricing.</p>
+        <span class="section-tag">Affordable, Flexible Tuition</span>
+        <h2 class="section-title">Tuition Plans Built For Your Family</h2>
+        <p class="section-subtitle">Select a standard monthly package below or build a custom schedule with sibling discounts.</p>
       </div>
 
-      <div class="calc-container">
-        <div class="calc-controls">
-          <div class="calc-group">
-            <div class="calc-label-wrapper">
-              <label for="classes-per-week">Lessons Per Week</label>
-              <span class="calc-value-bubble" id="classes-bubble">3 Classes</span>
-            </div>
-            <input type="range" class="range-slider" id="classes-per-week" min="1" max="5" value="3">
+      <div class="offers-grid" style="margin-bottom: 4rem;">
+        <div class="offer-card" style="text-align: center; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px;">
+          <div>
+            <span class="course-badge" style="position: static; margin-bottom: 1rem; display: inline-block;">Starter</span>
+            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">1 Lesson / Week</h4>
+            <div style="font-size: 2.25rem; font-weight: 800; color: var(--accent-gold); margin: 1rem 0;">$24<span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">/mo</span></div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Ideal for self-paced review or light schedules. Basic phonics and reading assessment.</p>
           </div>
-
-          <div class="calc-group">
-            <span id="label-duration" class="calc-label">Lesson Duration</span>
-            <div class="calc-options-grid" role="radiogroup" aria-labelledby="label-duration">
-              <button class="calc-opt-btn active" data-duration="30" role="radio" aria-checked="true">30 Mins</button>
-              <button class="calc-opt-btn" data-duration="45" role="radio" aria-checked="false">45 Mins</button>
-              <button class="calc-opt-btn" data-duration="60" role="radio" aria-checked="false">60 Mins</button>
-            </div>
-          </div>
-
-          <div class="calc-group">
-            <span id="label-tutor" class="calc-label">Instructor Preference</span>
-            <div class="calc-options-grid" role="radiogroup" aria-labelledby="label-tutor">
-              <button class="calc-opt-btn active" data-tutor-type="standard" role="radio" aria-checked="true">Standard</button>
-              <button class="calc-opt-btn" data-tutor-type="senior" role="radio" aria-checked="false">Senior Sheikh</button>
-              <button class="calc-opt-btn" data-tutor-type="ijazah" role="radio" aria-checked="false">Ijazah Specialist</button>
-            </div>
-          </div>
-
-          <div class="calc-group">
-            <span id="label-students" class="calc-label">Number of Students (Family Discount)</span>
-            <div class="calc-options-grid calc-students-grid" role="radiogroup" aria-labelledby="label-students">
-              <button class="calc-opt-btn active" data-students="1" role="radio" aria-checked="true">1 Student</button>
-              <button class="calc-opt-btn" data-students="2" role="radio" aria-checked="false">2 Kids (15% Off)</button>
-              <button class="calc-opt-btn" data-students="3" role="radio" aria-checked="false">3 Kids (25% Off)</button>
-              <button class="calc-opt-btn" data-students="4" role="radio" aria-checked="false">4+ Kids (35% Off)</button>
-            </div>
-          </div>
+          <a href="#booking" class="btn btn-secondary" style="width: 100%;">Enroll Starter</a>
         </div>
 
-        <div class="calc-receipt">
-          <div class="receipt-header">
-            <div class="promo-badge"><i class="fa-solid fa-fire"></i> 20% Launch Offer Active</div>
-            <h3 class="receipt-title">Monthly Plan Details</h3>
-            <p id="receipt-summary-text">3 lessons per week (30 mins each)</p>
+        <div class="offer-card popular" style="text-align: center; display: flex; flex-direction: column; justify-content: space-between; min-height: 400px; transform: scale(1.03); border-color: var(--accent-gold);">
+          <div class="offer-popular-tag">MOST POPULAR</div>
+          <div>
+            <span class="course-badge" style="position: static; margin-bottom: 1rem; display: inline-block; background: var(--accent-gold); color: var(--bg-primary);">Standard</span>
+            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">3 Lessons / Week</h4>
+            <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-gold); margin: 1rem 0;">$59<span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">/mo</span></div>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Our recommended track for steady Tajweed fluency and memorization revision. Full tracking profile included.</p>
           </div>
-          
-          <div class="receipt-price-box">
-            <span class="receipt-price-label">Total Monthly Tuition</span>
-            <div class="receipt-price" id="calc-price-display">$59<span>/mo</span></div>
-          </div>
+          <a href="#booking" class="btn btn-primary" style="width: 100%;">Enroll Standard</a>
+        </div>
 
-          <div class="receipt-breakdown">
-            <div class="receipt-line">
-              <span>Per lesson cost:</span>
-              <strong id="receipt-cost-per-lesson">$4.92</strong>
-            </div>
-            <div class="receipt-line">
-              <span>Lessons per month:</span>
-              <strong id="receipt-total-lessons">12 classes</strong>
-            </div>
-            <div class="receipt-line" id="receipt-discount-line" style="display: none;">
-              <span>Family Discount:</span>
-              <strong id="receipt-discount-value" style="color: var(--emerald-bright);">-15% (-$18.00)</strong>
-            </div>
-            <div class="receipt-line">
-              <span>Enrollment:</span>
-              <strong style="color: var(--emerald-bright);">FREE Registration</strong>
-            </div>
+        <div class="offer-card" style="text-align: center; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px;">
+          <div>
+            <span class="course-badge" style="position: static; margin-bottom: 1rem; display: inline-block;">Intensive</span>
+            <h4 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">5 Lessons / Week</h4>
+            <div style="font-size: 2.25rem; font-weight: 800; color: var(--accent-gold); margin: 1rem 0;">$89<span style="font-size: 1rem; font-weight: 500; color: var(--text-muted);">/mo</span></div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">Fast-track Hifz or language learning. Daily direct feedback loops with university scholars.</p>
           </div>
-
-          <a href="#booking" class="btn btn-primary" id="calc-cta-btn">Book This Schedule</a>
-          <!-- Secure Payment & Cancellation Trust Signals -->
-          <div class="secure-payment-signals" style="margin-top: 1.5rem; text-align: center; border-top: 1px solid var(--glass-border); padding-top: 1.25rem;">
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem; line-height: 1.4;">
-              <i class="fa-solid fa-rotate-left" style="color: var(--accent-gold); margin-right: 4px;"></i> <strong>100% Refund Policy:</strong> Unused lessons can be refunded or rescheduled within 30 days. Cancel anytime.
-            </p>
-            <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; opacity: 0.75; font-size: 0.8rem; color: var(--text-muted);">
-              <span><i class="fa-solid fa-lock" style="color: var(--emerald-bright); margin-right: 4px;"></i> SSL Secure Connection</span>
-              <span class="dot-separator">•</span>
-              <span><i class="fa-brands fa-cc-stripe" style="font-size: 1.15rem; vertical-align: middle; margin-right: 4px;"></i> Stripe Checkout</span>
-            </div>
-          </div>
+          <a href="#booking" class="btn btn-secondary" style="width: 100%;">Enroll Intensive</a>
         </div>
       </div>
 
-      <!-- Special Offers & Family Packages -->
-      <div class="calc-offers">
-        <h3 class="offers-title"><i class="fa-solid fa-gift"></i> Exclusive Family & Sibling Discounts</h3>
-        <p class="offers-subtitle">Financial ease is our priority. We want to ensure every child connects with the Holy Quran. Register multiple children and save automatically!</p>
-        
-        <div class="offers-grid">
-          <div class="offer-card">
-            <div class="offer-badge">15% OFF</div>
-            <h4>Sibling Package</h4>
-            <span class="offer-sub">2 Children Enrolled</span>
-            <p>Perfect for siblings. Share scheduling flexibility, get custom tracking profiles, and save 15% on total monthly tuition.</p>
-          </div>
-          
-          <div class="offer-card">
-            <div class="offer-badge">25% OFF</div>
-            <h4>Family Package</h4>
-            <span class="offer-sub">3 Children Enrolled</span>
-            <p>Make learning standard across your home. Study with designated Jamia tul Kausar tutors and get 25% off monthly tuition.</p>
-          </div>
-          
-          <div class="offer-card popular">
-            <div class="offer-popular-tag">BEST VALUE</div>
-            <div class="offer-badge">35% OFF</div>
-            <h4>Elite Family Package</h4>
-            <span class="offer-sub">4+ Children Enrolled</span>
-            <p>Our most supportive option. Ensure every child memorizes and translates the Quran, with a massive 35% discount applied.</p>
-          </div>
-        </div>
-
-        <div class="offer-guarantee">
-          <div class="guarantee-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <div class="guarantee-text">
-            <h4>🛡️ Our Financial Ease & Honor Pledge</h4>
-            <p>At Quranic IQ Academy, we believe that learning the word of Allah should never be hindered by pricing. If you are experiencing genuine financial hardship, please contact us directly on WhatsApp at <strong>+92 304 4719851</strong>. <strong>No student is ever turned away due to an inability to pay.</strong> We will arrange a custom installment plan or a partial/full scholarship for your children.</p>
-          </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="pricing.html" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2.5rem; font-size: 1rem; box-shadow: 0 4px 15px var(--accent-gold-glow);">
+          <i class="fa-solid fa-calculator"></i> Calculate Custom Plan & Family Discounts <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; opacity: 0.75; font-size: 0.85rem; color: var(--text-muted); margin-top: 1.5rem;">
+          <span><i class="fa-solid fa-lock" style="color: var(--emerald-bright); margin-right: 4px;"></i> SSL Secure Connection</span>
+          <span class="dot-separator">•</span>
+          <span><i class="fa-brands fa-cc-stripe" style="font-size: 1.15rem; vertical-align: middle; margin-right: 4px;"></i> Stripe Checkout</span>
         </div>
       </div>
     </div>
@@ -1464,732 +1385,82 @@
         <p class="section-subtitle">Explore educational articles written by our scholars to master Tajweed rules, learn root words, and track your studies effectively.</p>
       </div>
 
-      <div class="blog-main-area">
-          <div class="blog-filters">
-            <button class="blog-filter-btn active" data-blog-filter="all">All Articles (30)</button>
-            <button class="blog-filter-btn" data-blog-filter="recitation">Recitation & Tajweed</button>
-            <button class="blog-filter-btn" data-blog-filter="comprehension">Vocab & Comprehension</button>
-            <button class="blog-filter-btn" data-blog-filter="hifz">Hifz & Memorization</button>
-            <button class="blog-filter-btn" data-blog-filter="beginners">Kids & Beginners</button>
+      <div class="blog-grid" id="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+        <!-- Article 11 -->
+        <div class="blog-card" data-blog-category="recitation">
+          <div class="blog-card-banner">
+            <img src="https://images.unsplash.com/photo-1584281729288-dd77a5f2ec49?q=50&w=200&auto=format&fit=crop" alt="Makharij Mastery: Pronounce Every Quranic Letter Correctly" loading="lazy" width="400" height="250">
+            <span class="blog-card-badge">Recitation</span>
           </div>
-
-          <div class="blog-grid" id="blog-grid">
-
-            <!-- Article 11 -->
-            <div class="blog-card" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1584281729288-dd77a5f2ec49?q=50&w=200&auto=format&fit=crop" alt="Makharij Mastery: Pronounce Every Quranic Letter Correctly" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Recitation</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Makharij Mastery: Pronounce Every Quranic Letter Correctly</h3>
-                <p class="blog-card-excerpt">Mastering the articulation points of Arabic letters prevents major recitation errors. Learn makharij rules in your next online class.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> June 27, 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 5 min read</span>
             </div>
-
-            <!-- Article 12 -->
-            <div class="blog-card" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=50&w=200&auto=format&fit=crop" alt="Reciting with Melodious Rhythm: The Sunnah of Beautiful Quran Reading" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Recitation</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 20, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Reciting with Melodious Rhythm: The Sunnah of Beautiful Quran Reading</h3>
-                <p class="blog-card-excerpt">Reciting with a beautiful tone connects you to the prophetic tradition. Explore step-by-step Tajweed classes.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 13 -->
-            <div class="blog-card" data-blog-category="beginners">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Noorani Qaida & Tajweed for Kids and Beginners" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Beginners</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 13, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Noorani Qaida & Tajweed for Kids and Beginners</h3>
-                <p class="blog-card-excerpt">Discover how we break down compound letters and starting rules into kid-friendly sessions to build early confidence.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">FA</div>
-                  <span>Ustadha Fatima Al-Zahra</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 14 -->
-            <div class="blog-card" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=50&w=200&auto=format&fit=crop" alt="Understanding Waqf & Ibtida: The Crucial Rules of Pausing and Breathing" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Tajweed</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> June 06, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Understanding Waqf & Ibtida: The Crucial Rules of Pausing and Breathing</h3>
-                <p class="blog-card-excerpt">Learn the proper rules of where to pause and restart your recitation to maintain semantic accuracy.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 15 -->
-            <div class="blog-card" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Study Quran Under Licensed Scholars (Ijazah Holders)" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Tutors</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> May 30, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Study Quran Under Licensed Scholars (Ijazah Holders)</h3>
-                <p class="blog-card-excerpt">Experience the traditional chains of transmission (Sanad) with modern digital tools in our 1-on-1 classes.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 16 -->
-            <div class="blog-card" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=50&w=200&auto=format&fit=crop" alt="Stress Relief & Focus: The Science Behind Quranic Sound Waves" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Science</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> May 23, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Stress Relief & Focus: The Science Behind Quranic Sound Waves</h3>
-                <p class="blog-card-excerpt">Neuro-linguistic research shows how rhythmic Tajweed recitation triggers alpha brainwave states of calm and mental clarity.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">FA</div>
-                  <span>Ustadha Fatima Al-Zahra</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 17 -->
-            <div class="blog-card" style="display: none;" data-blog-category="beginners">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=50&w=200&auto=format&fit=crop" alt="Personalized 1-on-1 Classrooms vs Crowded Classrooms" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Kids</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> May 16, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Personalized 1-on-1 Classrooms vs Crowded Classrooms</h3>
-                <p class="blog-card-excerpt">Explore how interactive whiteboards and drawing screens make learning Tajweed engaging for children.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">FA</div>
-                  <span>Ustadha Fatima Al-Zahra</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 18 -->
-            <div class="blog-card" style="display: none;" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=50&w=200&auto=format&fit=crop" alt="Major vs Minor Recitation Errors (Lahn Jali & Lahn Khafi)" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Tajweed</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> May 09, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Major vs Minor Recitation Errors (Lahn Jali & Lahn Khafi)</h3>
-                <p class="blog-card-excerpt">Learn to distinguish between critical errors that change the meaning of your prayers and minor hidden errors.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 19 -->
-            <div class="blog-card" style="display: none;" data-blog-category="beginners">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=50&w=200&auto=format&fit=crop" alt="Teaching Kids Quran Recitation: A Gift for Life" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Kids</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> May 02, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Teaching Kids Quran Recitation: A Gift for Life</h3>
-                <p class="blog-card-excerpt">Start your children's spiritual journey early with interactive gaming systems and progress logging trackers.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">FA</div>
-                  <span>Ustadha Fatima Al-Zahra</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 20 -->
-            <div class="blog-card" style="display: none;" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=50&w=200&auto=format&fit=crop" alt="Begin Your Custom Tajweed Study Program Today" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Recitation</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> April 25, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Begin Your Custom Tajweed Study Program Today</h3>
-                <p class="blog-card-excerpt">Whether starting from the alphabet or seeking professional certification, our programs adapt to your exact pace.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 21 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Recitation vs Comprehension: Connect with the Message" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Comprehension</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> April 18, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Recitation vs Comprehension: Connect with the Message</h3>
-                <p class="blog-card-excerpt">Unlock the direct wisdom of Quranic verses by reading word-by-word translations and context explanations.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 22 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=50&w=200&auto=format&fit=crop" alt="The Power of Arabic Root Words in Quranic Vocabulary" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Vocabulary</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> April 11, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">The Power of Arabic Root Words in Quranic Vocabulary</h3>
-                <p class="blog-card-excerpt">Learn how tracking and studying 300 core Arabic root words unlocks comprehension of over 70% of the entire Quran.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">FA</div>
-                  <span>Ustadha Fatima Al-Zahra</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 23 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?q=50&w=200&auto=format&fit=crop" alt="Developing Spiritual Intelligence (Tadabbur) Daily" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Reflection</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> April 04, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Developing Spiritual Intelligence (Tadabbur) Daily</h3>
-                <p class="blog-card-excerpt">Reflect on meanings, context, and modern applications of the verses to grow your spiritual IQ.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 24 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=50&w=200&auto=format&fit=crop" alt="Practical Life Solutions Guided by the Quran" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Guidance</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> March 28, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Practical Life Solutions Guided by the Quran</h3>
-                <p class="blog-card-excerpt">Find answers to stress, finance, ethics, and relationships in the structured commentary (Tafsir).</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 25 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=50&w=200&auto=format&fit=crop" alt="Linguistic Mapping: Word-by-Word Translation Methods" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Linguistics</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> March 21, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Linguistic Mapping: Word-by-Word Translation Methods</h3>
-                <p class="blog-card-excerpt">Study with interactive translation mapping that correlates English words directly to classical Arabic vocabulary.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">FA</div>
-                  <span>Ustadha Fatima Al-Zahra</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 26 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=50&w=200&auto=format&fit=crop" alt="Dynamic Student Portals for Vocabulary and Quizzes" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Portal</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> March 14, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Dynamic Student Portals for Vocabulary and Quizzes</h3>
-                <p class="blog-card-excerpt">Track your memorized words and study cards live in your customized interactive learning portal.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">FA</div>
-                  <span>Ustadha Fatima Al-Zahra</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 27 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1584281729288-dd77a5f2ec49?q=50&w=200&auto=format&fit=crop" alt="Building Your Quranic IQ: A Modern Approach to Literacy" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Quranic IQ</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> March 07, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Building Your Quranic IQ: A Modern Approach to Literacy</h3>
-                <p class="blog-card-excerpt">True literacy is semantic. Learn the pronunciation, vocabulary roots, and implementation of all verses.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 28 -->
-            <div class="blog-card" style="display: none;" data-blog-category="beginners">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Stories of the Prophets: Engaging Comprehension for Kids" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Kids</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> February 28, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Stories of the Prophets: Engaging Comprehension for Kids</h3>
-                <p class="blog-card-excerpt">Teach your kids the inspiring historical stories of the Quran while teaching vocabulary and reading.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">FA</div>
-                  <span>Ustadha Fatima Al-Zahra</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 29 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=50&w=200&auto=format&fit=crop" alt="The Complete Guide to Quranic IQ & Growth Is Live" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Guide</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> February 21, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">The Complete Guide to Quranic IQ & Growth Is Live</h3>
-                <p class="blog-card-excerpt">Unlock our newly published comprehensive research guide on spiritual intelligence and vocabulary retention.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 30 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Schedule Your Free Trial Class for Translation & Vocab" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Trial</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> February 14, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">Schedule Your Free Trial Class for Translation & Vocab</h3>
-                <p class="blog-card-excerpt">Book your live 1-on-1 translation session with native university scholars and set your learning goals.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 1 -->
-            <div class="blog-card" style="display: none;" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=50&w=200&auto=format&fit=crop" alt="Quran book open for recitation" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Recitation</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> February 07, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 6 min read</span>
-                </div>
-                <h3 class="blog-card-title">Mastering Quran Recitation with Tajweed: The Ultimate Beginner's Guide</h3>
-                <p class="blog-card-excerpt">Learn how mastering Tajweed pronunciation rules improves your connection to the Quran, and discover a step-by-step path to recitation fluency.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-                
-                
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 2 -->
-            <div class="blog-card" style="display: none;" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Islamic architecture interior" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Tajweed</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> January 31, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">10 Essential Tajweed Rules Every Quran Reader Must Learn</h3>
-                <p class="blog-card-excerpt">Explore the foundational rules of Noon Sakinah, Madd, and Qalqalah, explained simply for students starting their Tajweed mastery journey.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-                
-                
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 3 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?q=50&w=200&auto=format&fit=crop" alt="Classical Arabic book open" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Vocabulary</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> January 24, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 7 min read</span>
-                </div>
-                <h3 class="blog-card-title">How to Master Arabic Root Words with a Quranic Vocabulary Tracker</h3>
-                <p class="blog-card-excerpt">Discover how studying Arabic root words and utilizing a custom Quranic vocabulary tracker can help you understand and reflect on verses as you recite them.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(340,70%,50%), hsl(200,70%,40%));">FA</div>
-                  <span>Ustadhah Fatima Amin</span>
-                </div>
-                
-                
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 4 -->
-            <div class="blog-card" style="display: none;" data-blog-category="hifz">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=50&w=200&auto=format&fit=crop" alt="Person studying with notebook and coffee" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Hifz</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> January 17, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 8 min read</span>
-                </div>
-                <h3 class="blog-card-title">Quran Memorization (Hifz) for Busy Adults: Practical Strategies</h3>
-                <p class="blog-card-excerpt">Juggling work, family, and Hifz? Learn how spaced repetition, active revision loops, and personalized scheduling help adults memorize the Quran.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-                
-                
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 5 -->
-            <div class="blog-card" style="display: none;" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?q=50&w=200&auto=format&fit=crop" alt="Mosque minarets dome and crescent moon representing Arabic and Islamic tutors" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Instructors</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> January 10, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 6 min read</span>
-                </div>
-                <h3 class="blog-card-title">The Role of Native Arabic Tutors in Perfecting Quran Pronunciation</h3>
-                <p class="blog-card-excerpt">Why auditory correction from certified Jamia tul Kausar scholars is essential for mastering the complex phonetics of classical Quranic Arabic.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(340,70%,50%), hsl(200,70%,40%));">FA</div>
-                  <span>Ustadhah Fatima Amin</span>
-                </div>
-                
-                
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 6 -->
-            <div class="blog-card" style="display: none;" data-blog-category="beginners">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1597935258735-e254c1839512?q=50&w=200&auto=format&fit=crop" alt="Holy Quran open on rehal holder representing basic Quran lessons" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Kids</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> January 03, 2026</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">A Parents' Guide to Noorani Qaida: Teaching Kids Quran Reading</h3>
-                <p class="blog-card-excerpt">Learn how the Noorani Qaida syllabus helps children build letter recognition, articulation, and reading fluency through structured phonics.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(120,60%,35%), hsl(45,80%,52%));">SH</div>
-                  <span>Ustadhah Sarah Al-Hashimi</span>
-                </div>
-                
-                
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 7 -->
-            <div class="blog-card" style="display: none;" data-blog-category="comprehension">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=50&w=200&auto=format&fit=crop" alt="Computer screen with metrics and graphs" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Branding</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> December 27, 2025</span>
-                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-                </div>
-                <h3 class="blog-card-title">What is Quranic IQ? Elevating Your Spiritual and Intellectual Growth</h3>
-                <p class="blog-card-excerpt">Understand the vision behind Quranic IQ—combining traditional recitation with dynamic comprehension metrics and cognitive development.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(270,70%,55%), hsl(160,70%,35%));">QI</div>
-                  <span>Quranic IQ Academic Board</span>
-                </div>
-                
-                
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 8 -->
-            <div class="blog-card" style="display: none;" data-blog-category="beginners">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1604881990409-b9f226b77230?q=50&w=200&auto=format&fit=crop" alt="Islamic geometric art and calligraphy representing focused learning" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Kids</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> December 20, 2025</span>
-                  <span><i class="fa-regular fa-clock"></i> 6 min read</span>
-                </div>
-                <h3 class="blog-card-title">Tips to Help Kids Focus During Online Quran Sessions</h3>
-                <p class="blog-card-excerpt">Keep young minds engaged during virtual classes. Discover active learning techniques, positive rewards, and custom portal features.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(120,60%,35%), hsl(45,80%,52%));">SH</div>
-                  <span>Ustadhah Sarah Al-Hashimi</span>
-                </div>
-                
-                
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 9 -->
-            <div class="blog-card" style="display: none;" data-blog-category="recitation">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=50&w=200&auto=format&fit=crop" alt="Quiet study room reading book" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Recitation</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> December 13, 2025</span>
-                  <span><i class="fa-regular fa-clock"></i> 7 min read</span>
-                </div>
-                <h3 class="blog-card-title">The Scientific and Spiritual Benefits of Daily Quran Recitation</h3>
-                <p class="blog-card-excerpt">How establishing a daily habit of reciting the Quran enhances memory recall, lowers stress levels, and brings tranquility to the mind.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
-                  <span>Sheikh Ahmed Al-Mansoor</span>
-                </div>
-                
-                
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
-            </div>
-
-            <!-- Article 10 -->
-            <div class="blog-card" style="display: none;" data-blog-category="hifz">
-              <div class="blog-card-banner">
-                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=50&w=200&auto=format&fit=crop" alt="Studying at home on a laptop" loading="lazy" width="400" height="250">
-                <span class="blog-card-badge">Academy</span>
-              </div>
-              <div class="blog-card-body">
-                <div class="blog-card-meta">
-                  <span><i class="fa-regular fa-calendar"></i> December 06, 2025</span>
-                  <span><i class="fa-regular fa-clock"></i> 8 min read</span>
-                </div>
-                <h3 class="blog-card-title">Online Quran Academy vs. Local Mosque Classes: A Modern Comparison</h3>
-                <p class="blog-card-excerpt">Compare the convenience, customization, tutor qualifications, and digital tools of online Quran academies versus traditional group classes.</p>
-                <div class="blog-card-author">
-                  <div class="author-avatar" style="background: linear-gradient(135deg, hsl(270,70%,55%), hsl(160,70%,35%));">QI</div>
-                  <span>Quranic IQ Academic Board</span>
-                </div>
-                
-                
-              </div>
-              <div class="blog-card-footer">
-                <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
-              </div>
+            <h3 class="blog-card-title">Makharij Mastery: Pronounce Every Quranic Letter Correctly</h3>
+            <p class="blog-card-excerpt">Mastering the articulation points of Arabic letters prevents major recitation errors. Learn makharij rules in your next online class.</p>
+            <div class="blog-card-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
+              <span>Sheikh Ahmed Al-Mansoor</span>
             </div>
           </div>
-          
-          <div class="blog-actions">
-            <button class="btn btn-secondary" id="load-more-blogs">Show More Articles <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="blog-card-footer">
+            <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
           </div>
         </div>
+
+        <!-- Article 12 -->
+        <div class="blog-card" data-blog-category="recitation">
+          <div class="blog-card-banner">
+            <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=50&w=200&auto=format&fit=crop" alt="Reciting with Melodious Rhythm: The Sunnah of Beautiful Quran Reading" loading="lazy" width="400" height="250">
+            <span class="blog-card-badge">Recitation</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> June 20, 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+            </div>
+            <h3 class="blog-card-title">Reciting with Melodious Rhythm: The Sunnah of Beautiful Quran Reading</h3>
+            <p class="blog-card-excerpt">Reciting with a beautiful tone connects you to the prophetic tradition. Explore step-by-step Tajweed classes.</p>
+            <div class="blog-card-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">SM</div>
+              <span>Sheikh Ahmed Al-Mansoor</span>
+            </div>
+          </div>
+          <div class="blog-card-footer">
+            <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
+          </div>
+        </div>
+
+        <!-- Article 13 -->
+        <div class="blog-card" data-blog-category="beginners">
+          <div class="blog-card-banner">
+            <img src="https://images.unsplash.com/photo-1609599006353-e629f1d40f4f?q=50&w=200&auto=format&fit=crop" alt="Noorani Qaida & Tajweed for Kids and Beginners" loading="lazy" width="400" height="250">
+            <span class="blog-card-badge">Beginners</span>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span><i class="fa-regular fa-calendar"></i> June 13, 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+            </div>
+            <h3 class="blog-card-title">Noorani Qaida & Tajweed for Kids and Beginners</h3>
+            <p class="blog-card-excerpt">Discover how we break down compound letters and starting rules into kid-friendly sessions to build early confidence.</p>
+            <div class="blog-card-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, hsl(45,80%,52%), hsl(160,80%,35%));">FA</div>
+              <span>Ustadha Fatima Al-Zahra</span>
+            </div>
+          </div>
+          <div class="blog-card-footer">
+            <button class="btn btn-secondary btn-sm read-article-btn">Read Article <i class="fa-solid fa-arrow-right-long"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="blog.html" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 2rem;">
+          Browse All Articles & Guides <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -2250,90 +1521,12 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="faq-item">
-          <button class="faq-header" type="button" aria-expanded="false">
-            <span class="faq-question">How long is each lesson?</span>
-            <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-body">
-            <div class="faq-content">
-              Standard lessons are 30 minutes long, which is the optimal duration for cognitive absorption and focus, particularly for children. For advanced students or adults, we also offer 45-minute and 60-minute session options.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-header" type="button" aria-expanded="false">
-            <span class="faq-question">Can siblings learn together?</span>
-            <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-body">
-            <div class="faq-content">
-              To maintain high educational quality, all our classes are strictly 1-on-1. Siblings cannot attend the same class together, as it dilutes the tutor's focus. However, they can be scheduled back-to-back and qualify for our sibling discount (up to 35% off).
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-header" type="button" aria-expanded="false">
-            <span class="faq-question">What if we miss a class?</span>
-            <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-body">
-            <div class="faq-content">
-              If you need to miss a class, simply notify us at least 4 hours in advance. We will cancel the slot and provide a free make-up lesson credit that you can schedule at any time within 30 days.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-header" type="button" aria-expanded="false">
-            <span class="faq-question">Which countries do you teach?</span>
-            <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-body">
-            <div class="faq-content">
-              We teach students globally! Our active student base is located primarily in the USA, UK, Canada, Australia, New Zealand, Saudi Arabia, and Western Europe. Our scheduling system operates 24/7, adapting to any time zone.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-header" type="button" aria-expanded="false">
-            <span class="faq-question">Which payment methods do you accept?</span>
-            <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-body">
-            <div class="faq-content">
-              We accept all major international credit and debit cards (Visa, MasterCard, American Express, Discover) processed securely via Stripe. We also support PayPal.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-header" type="button" aria-expanded="false">
-            <span class="faq-question">Is there homework?</span>
-            <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-body">
-            <div class="faq-content">
-              Yes, we assign light review homework (usually 5–10 minutes of daily recitation or memorization practice) to ensure learning consolidation. All assignments are logged in the student dashboard for easy revision.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-header" type="button" aria-expanded="false">
-            <span class="faq-question">How do you track progress?</span>
-            <span class="faq-toggle-icon"><i class="fa-solid fa-plus"></i></span>
-          </button>
-          <div class="faq-body">
-            <div class="faq-content">
-              We track progress dynamically. After every class, the tutor logs pronunciation accuracy, surah completion milestones, and root vocabulary retention scores in the student portal, which parents can view in real-time.
-            </div>
-          </div>
-        </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="faq.html" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 2rem;">
+          Have More Questions? View All FAQs <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
       </div>
     </div>
   </section>

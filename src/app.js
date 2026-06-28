@@ -34,6 +34,7 @@ function initStats() {
 // 1. Theme Management (Dark/Light Mode)
 function initTheme() {
   const themeToggle = document.getElementById('theme-toggle');
+  if (!themeToggle) return;
   const body = document.body;
   
   // Check local storage or defaults
@@ -64,6 +65,7 @@ function initNavbar() {
   const header = document.getElementById('header');
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
+  if (!hamburger || !navMenu) return;
   const navLinks = document.querySelectorAll('.nav-link');
 
   // Highlight links on scroll using IntersectionObserver for maximum scroll performance
@@ -235,6 +237,7 @@ function initCourseModal() {
 // 5. Tuition Calculator Widget
 function initCalculator() {
   const classesSlider = document.getElementById('classes-per-week');
+  if (!classesSlider) return;
   const classesBubble = document.getElementById('classes-bubble');
   const durationBtns = document.querySelectorAll('[data-duration]');
   const tutorTypeBtns = document.querySelectorAll('[data-tutor-type]');
@@ -366,6 +369,7 @@ function initCalculator() {
 // 6. Tutor Profiles Slider & Recitation Audio
 function initTutorSlider() {
   const slides = document.querySelectorAll('.tutor-slide');
+  if (!slides || !slides.length) return;
   const prevBtn = document.getElementById('tutor-prev-btn');
   const nextBtn = document.getElementById('tutor-next-btn');
   const dots = document.querySelectorAll('#tutor-dots .slide-dot');
@@ -474,6 +478,7 @@ function initTutorSlider() {
 // 7. Multi-step trial booking form
 function initBookingForm() {
   const form = document.getElementById('booking-form');
+  if (!form) return;
   const steps = document.querySelectorAll('.booking-step');
   const indicators = document.querySelectorAll('.progress-step-indicator');
   const barFill = document.getElementById('form-progress-bar');

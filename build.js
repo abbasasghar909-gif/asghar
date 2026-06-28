@@ -83,6 +83,24 @@ function build() {
   fs.writeFileSync(path.join(destDir, 'terms-of-service.html'), termsMin, 'utf8');
   console.log(`Minified terms-of-service.html (${(termsSrc.length / 1024).toFixed(2)} KB -> ${(termsMin.length / 1024).toFixed(2)} KB)`);
 
+  // Pricing HTML
+  const pricingSrc = fs.readFileSync(path.join(srcDir, 'pricing.html'), 'utf8');
+  const pricingMin = minifyHTML(pricingSrc);
+  fs.writeFileSync(path.join(destDir, 'pricing.html'), pricingMin, 'utf8');
+  console.log(`Minified pricing.html (${(pricingSrc.length / 1024).toFixed(2)} KB -> ${(pricingMin.length / 1024).toFixed(2)} KB)`);
+
+  // Blog HTML
+  const blogSrc = fs.readFileSync(path.join(srcDir, 'blog.html'), 'utf8');
+  const blogMin = minifyHTML(blogSrc);
+  fs.writeFileSync(path.join(destDir, 'blog.html'), blogMin, 'utf8');
+  console.log(`Minified blog.html (${(blogSrc.length / 1024).toFixed(2)} KB -> ${(blogMin.length / 1024).toFixed(2)} KB)`);
+
+  // FAQ HTML
+  const faqSrc = fs.readFileSync(path.join(srcDir, 'faq.html'), 'utf8');
+  const faqMin = minifyHTML(faqSrc);
+  fs.writeFileSync(path.join(destDir, 'faq.html'), faqMin, 'utf8');
+  console.log(`Minified faq.html (${(faqSrc.length / 1024).toFixed(2)} KB -> ${(faqMin.length / 1024).toFixed(2)} KB)`);
+
   // JS
   const jsSrc = fs.readFileSync(path.join(srcDir, 'app.js'), 'utf8');
   const jsMin = minifyJS(jsSrc);
