@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Dynamic Stats Loader
 function initStats() {
-  fetch('stats.json')
+  fetch('data/stats.json')
     .then(res => res.json())
     .then(data => {
       const studentsEl = document.getElementById('stat-students');
@@ -28,7 +28,7 @@ function initStats() {
       if (ratingEl && data.trustpilotRating) ratingEl.textContent = data.trustpilotRating;
       if (studyingEl && data.studyingRightNow) studyingEl.textContent = data.studyingRightNow;
     })
-    .catch(err => console.log('Error loading stats from stats.json, using static values:', err));
+    .catch(err => console.log('Error loading stats from data/stats.json, using static values:', err));
 }
 
 // 1. Theme Management (Dark/Light Mode)

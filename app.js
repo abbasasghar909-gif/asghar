@@ -11,7 +11,7 @@ initTestimonials();
 initBlog();
 initAIChatbot();
 });function initStats() {
-fetch('stats.json')
+fetch('data/stats.json')
 .then(res => res.json())
 .then(data => {
 const studentsEl = document.getElementById('stat-students');
@@ -23,7 +23,7 @@ if (tutorsEl && data.certifiedSheikhs) tutorsEl.textContent = data.certifiedShei
 if (ratingEl && data.trustpilotRating) ratingEl.textContent = data.trustpilotRating;
 if (studyingEl && data.studyingRightNow) studyingEl.textContent = data.studyingRightNow;
 })
-.catch(err => console.log('Error loading stats from stats.json, using static values:', err));
+.catch(err => console.log('Error loading stats from data/stats.json, using static values:', err));
 }function initTheme() {
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;const savedTheme = localStorage.getItem('theme') || 'dark';
